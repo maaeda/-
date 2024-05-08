@@ -17,6 +17,8 @@ namespace チーム開発5月7日_
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
+                
         }
     }
 }
