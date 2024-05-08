@@ -16,5 +16,11 @@ namespace チーム開発5月7日_
         {
             InitializeComponent();
         }
+
+        /*起動時の処理*/
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
