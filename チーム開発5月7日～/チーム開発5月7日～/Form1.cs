@@ -22,5 +22,10 @@ namespace チーム開発5月7日_
         {
             throw new System.NotImplementedException();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Properties.Resources.test;
+        }
     }
 }
