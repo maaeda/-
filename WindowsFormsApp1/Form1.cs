@@ -37,5 +37,7 @@ namespace WindowsFormsApp1
             DateTime now = DateTime.Now;
             timelabel.Text = now.ToLongTimeString();
         }
+
+
     }
 }
