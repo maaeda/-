@@ -21,15 +21,14 @@ namespace WindowsFormsApp1
         {
             /*画像の表示*/
             this.Text = ProductName;
-            // ピクチャボックスの設定
+
             //pictureBox1.Dock = DockStyle.Fill;    // フォームいっぱいに貼り付ける
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom; // 縦横比を変えずに引き延ばす
-            pictureBox1.Image = Properties.Resources.test;
+            pictureBox1.Image = Properties.Resources.test; //画像表示
             /************/
 
             timer1.Start();
             foodlabel.Text = " ";
-
 
         }
 

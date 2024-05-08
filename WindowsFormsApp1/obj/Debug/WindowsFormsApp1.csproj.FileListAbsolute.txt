@@ -9,3 +9,13 @@ C:\Users\pyu56\RiderProjects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\Windows
 C:\Users\pyu56\RiderProjects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 C:\Users\pyu56\RiderProjects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\pyu56\RiderProjects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\pyu56\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\pyu56\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\pyu56\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\pyu56\Documents\GitHub\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Users\pyu56\Documents\GitHub\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\pyu56\Documents\GitHub\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\pyu56\Documents\GitHub\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\pyu56\Documents\GitHub\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\pyu56\Documents\GitHub\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\pyu56\Documents\GitHub\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
