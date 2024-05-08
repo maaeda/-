@@ -40,5 +40,10 @@ namespace チーム開発5月7日_
             DateTime now = DateTime.Now;
             label1.Text =now.ToLongTimeString();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Properties.Resources.test;
+        }
     }
 }

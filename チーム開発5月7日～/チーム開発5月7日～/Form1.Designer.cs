@@ -29,6 +29,7 @@ namespace チーム開発5月7日_
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
             this.components = new System.ComponentModel.Container();
             this.testlabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -78,20 +79,50 @@ namespace チーム開発5月7日_
             this.Controls.Add(this.button1);
             this.Controls.Add(this.testlabel);
             this.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(334, 69);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(231, 121);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(775, 353);
+            this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> 976d47cc4902df006f25586b8549496245904454
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+<<<<<<< HEAD
             this.PerformLayout();
+=======
+>>>>>>> 976d47cc4902df006f25586b8549496245904454
 
         }
 
         #endregion
 
+<<<<<<< HEAD
         private System.Windows.Forms.Label testlabel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer1;
+=======
+        private System.Windows.Forms.PictureBox pictureBox1;
+>>>>>>> 976d47cc4902df006f25586b8549496245904454
     }
 }
 
