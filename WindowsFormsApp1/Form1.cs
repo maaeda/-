@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.WebRequestMethods;
 
 namespace WindowsFormsApp1
 {
@@ -33,6 +34,11 @@ namespace WindowsFormsApp1
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom; // 縦横比を変えずに引き延ばす
             pictureBox1.Image = Properties.Resources.test; //画像表示
             /************/
+
+            /*API*/
+            string apiUrl = "https://app.rakuten.co.jp/services/api/Recipe/CategoryList/20170426?applicationId=1062554798332159397";
+
+            /*****/
 
             timer1.Start();
             foodlabel.Text = " ";
