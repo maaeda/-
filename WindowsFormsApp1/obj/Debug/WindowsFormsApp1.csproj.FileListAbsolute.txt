@@ -19,7 +19,6 @@ C:\Users\pyu56\Documents\GitHub\Best-meal\WindowsFormsApp1\obj\Debug\WindowsForm
 C:\Users\pyu56\Documents\GitHub\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 C:\Users\pyu56\Documents\GitHub\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\pyu56\Documents\GitHub\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
-<<<<<<< Updated upstream
 C:\Users\inbed\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
 C:\Users\inbed\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
 C:\Users\inbed\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
@@ -30,19 +29,3 @@ C:\Users\inbed\Documents\GitHub\Best-meal\WindowsFormsApp1\obj\Debug\WindowsForm
 C:\Users\inbed\Documents\GitHub\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 C:\Users\inbed\Documents\GitHub\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\inbed\Documents\GitHub\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
-=======
-D:\Documents\GitHub\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
-D:\Documents\GitHub\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
-D:\Documents\GitHub\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
-D:\Documents\GitHub\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
-D:\Documents\GitHub\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
-D:\Documents\GitHub\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
-D:\Documents\GitHub\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
-D:\Documents\GitHub\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
-D:\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
-D:\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
-D:\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
-D:\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.dll
-D:\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.xml
-D:\Documents\GitHub\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
->>>>>>> Stashed changes
