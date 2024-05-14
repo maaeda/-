@@ -1,6 +1,0 @@
-C:\Users\pyu56\RiderProjects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\BestMeat.csproj.AssemblyReference.cache
-C:\Users\pyu56\RiderProjects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\BestMeat.csproj.SuggestedBindingRedirects.cache
-C:\Users\pyu56\RiderProjects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
-C:\Users\pyu56\RiderProjects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\BestMeat.Properties.Resources.resources
-C:\Users\pyu56\RiderProjects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\BestMeat.csproj.GenerateResource.cache
-C:\Users\pyu56\RiderProjects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\BestMeat.csproj.CoreCompileInputs.cache
