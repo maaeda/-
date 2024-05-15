@@ -11,6 +11,9 @@ using static System.Net.WebRequestMethods;
 using Newtonsoft.Json;
 using System.Net.Http;
 using Newtonsoft.Json.Linq;
+using System.IO;
+using System.Net;
+using Svg;
 
 namespace WindowsFormsApp1
 {
@@ -21,7 +24,7 @@ namespace WindowsFormsApp1
         private readonly HttpClient _httpClient = new HttpClient();
         static readonly string recipeCategoryUrl = $"https://app.rakuten.co.jp/services/api/Recipe/CategoryList/20170426?applicationId=1062554798332159397";
 
-
+        string weatherImageUrl = "";
         string[] breakfastfoods = { "aaa", "bbb", "ccc" };// 朝ご飯を入れる大域変数
         string[] lunchfoods = { "aaa", "bbb", "ccc" };// 朝ご飯を入れる大域変数
         string[] dinnerfoods = { "aaa", "bbb", "ccc" };// 朝ご飯を入れる大域変数
@@ -33,9 +36,6 @@ namespace WindowsFormsApp1
 
         private async void Form1_Load(object sender, EventArgs e)
         {
-
-
-
             // 料理カテゴリの中からランダムでfoodlabelに表示させる処理
             try
             {
@@ -46,28 +46,79 @@ namespace WindowsFormsApp1
                 var random = new Random();
                 var randomCategory = categories[random.Next(categories.Length)];
 
-                foodlabel.Text = "カテゴリID" + randomCategory.CategoryId + "　" + randomCategory.CategoryName;
+                titleLabal.Text = "カテゴリID" + randomCategory.CategoryId + "　" + randomCategory.CategoryName;
             }
             catch (HttpRequestException ex)
             {
-                foodlabel.Text = "Message :{0} "+ ex.Message;
+                titleLabal.Text = "Message :{0} "+ ex.Message;
             }
+            /******************/
 
-
-
-
-
-
-
-
-            /*画像の表示*/
-            this.Text = ProductName;
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom; // 縦横比を変えずに引き延ばす
-            pictureBox1.Image = Properties.Resources.test; //画像表示
+            /*画像の表示　　今のところ使いません*/
+            //this.Text = ProductName;
+            //pictureBox1.SizeMode = PictureBoxSizeMode.Zoom; // 縦横比を変えずに引き延ばす
+            //pictureBox1.Image = Properties.Resources.test; //画像表示
             /************/
+
             /*API*/
             string foodApiUrl = "https://app.rakuten.co.jp/services/api/Recipe/CategoryList/20170426?applicationId=1062554798332159397";
             /*****/
+
+            /*天気取得*/
+            string apiUrl = "https://weather.tsukumijima.net/api/forecast/city/070010";
+            try
+            {
+                HttpResponseMessage response = await _httpClient.GetAsync(apiUrl);
+                response.EnsureSuccessStatusCode();
+                string responseBody = await response.Content.ReadAsStringAsync();
+
+                // JSONデータを解析します。
+                JObject weatherData = JObject.Parse(responseBody);
+
+                // 「天気」の項目を取得します。
+                string weatherDetail = (string)weatherData["forecasts"][0]["telop"];
+
+                weatherImageUrl         = (string)weatherData["forecasts"][0]["image"]["url"];
+                detailWeatherLabel.Text = (string)weatherData["forecasts"][0]["detail"]["weather"];
+                titleLabal.Text         = (string)weatherData["title"];
+                bodyLabal.Text          = (string)weatherData["description"]["bodyText"];
+                
+
+                // 天気に応じた画像を表示します。
+                // 例えば、「晴れ」の場合は晴れのラベルを、
+                // 「雨」の場合は雨のラベルを表示します。
+                // あとは自由に天気を追加することも可( 雨のち晴れ など)
+                /*
+                switch (weather)
+                {
+                    case "晴れ":
+                        titleLabal.Text = "晴れ";
+                        break;
+                    case "曇り":
+                        titleLabal.Text = "曇り";
+                        break;
+                    case "雨":
+                        titleLabal.Text = "雨";
+                        break;
+                    case "晴のち曇":
+                        titleLabal.Text = "晴れのち曇り";
+                        break;
+                    // 他の天気の条件も同様に追加します。
+                    default:
+                        titleLabal.Text = "不明";
+                        break;
+                }
+                */
+            }
+            catch (HttpRequestException ex)
+            {
+                MessageBox.Show($"エラーが発生しました: {ex.Message}");
+            }
+            /**********************/
+
+            /*天気ロゴを表示*/
+            webBrowser1.Navigate(weatherImageUrl);
+            /*************/
 
             timer1.Start();
         }
@@ -81,50 +132,8 @@ namespace WindowsFormsApp1
         private async void button1_Click(object sender, EventArgs e)
         {
 
-
-            string apiUrl = "https://weather.tsukumijima.net/api/forecast/city/070010";
-            try
-            {
-                HttpResponseMessage response = await _httpClient.GetAsync(apiUrl);
-                response.EnsureSuccessStatusCode();
-                string responseBody = await response.Content.ReadAsStringAsync();
-
-                // JSONデータを解析します。
-                JObject weatherData = JObject.Parse(responseBody);
-
-                // 「天気」の項目を取得します。
-                string weather = (string)weatherData["forecasts"][0]["telop"];
-
-                // 天気に応じた画像を表示します。
-                // 例えば、「晴れ」の場合は晴れのラベルを、
-                // 「雨」の場合は雨のラベルを表示します。
-                // あとは自由に天気を追加することも可( 雨のち晴れ など)
-                switch (weather)
-                {
-                    case "晴れ":
-                        foodlabel.Text = "晴れ";
-                        break;
-                    case "曇り":
-                        foodlabel.Text = "曇り";
-                        break;
-                    case "雨":
-                        foodlabel.Text = "雨";
-                        break;
-                    case "晴のち曇":
-                        foodlabel.Text = "晴れのち曇り";
-                        break;
-                    // 他の天気の条件も同様に追加します。
-                    default:
-                        foodlabel.Text = "不明";
-                        break;
-                }
-            }
-            catch (HttpRequestException ex)
-            {
-                MessageBox.Show($"エラーが発生しました: {ex.Message}");
-            }
-
         }
+
         public class Category
         {
             public string CategoryName { get; set; }

@@ -92,3 +92,6 @@ C:\Users\pyu56\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\System.Nume
 C:\Users\pyu56\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\pyu56\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\pyu56\Documents\GitHub\Best-meal\WindowsFormsApp1\obj\Debug\WindowsF.A1EEDF9B.Up2Date
+C:\Users\pyu56\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\ExCSS.dll
+C:\Users\pyu56\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\Svg.dll
+C:\Users\pyu56\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\Svg.xml
