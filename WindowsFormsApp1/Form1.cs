@@ -46,11 +46,11 @@ namespace WindowsFormsApp1
                 var random = new Random();
                 var randomCategory = categories[random.Next(categories.Length)];
 
-                titleLabal.Text = "カテゴリID" + randomCategory.CategoryId + "　" + randomCategory.CategoryName;
+                locationPrefecturLabel.Text = "カテゴリID" + randomCategory.CategoryId + "　" + randomCategory.CategoryName;
             }
             catch (HttpRequestException ex)
             {
-                titleLabal.Text = "Message :{0} "+ ex.Message;
+                locationPrefecturLabel.Text = "Message :{0} "+ ex.Message;
             }
             /******************/
 
@@ -76,12 +76,23 @@ namespace WindowsFormsApp1
                 JObject weatherData = JObject.Parse(responseBody);
 
                 // 「天気」の項目を取得します。
-                string weatherDetail = (string)weatherData["forecasts"][0]["telop"];
 
-                weatherImageUrl         = (string)weatherData["forecasts"][0]["image"]["url"];
-                detailWeatherLabel.Text = (string)weatherData["forecasts"][0]["detail"]["weather"];
-                titleLabal.Text         = (string)weatherData["title"];
-                bodyLabal.Text          = (string)weatherData["description"]["bodyText"];
+                /*取得する日にちの設定*/
+                int day = 0;
+                /*
+                 * 0 = 今日
+                 * 1 = 明日
+                 * 2 = 明後日
+                 * 変更されるのは画像と簡単な予報のみ -> weatherImageUrl & detailWeatherLabel.Text
+                 */
+
+                string weatherDetail = (string)weatherData["forecasts"][day]["telop"];
+
+                weatherImageUrl             = (string)weatherData["forecasts"][day]["image"]["url"];
+                locationPrefecturLabel.Text = (string)weatherData["location"]["prefecture"];
+                locationDistrictLabel.Text  = (string)weatherData["location"]["district"];
+                detailWeatherLabel.Text     = (string)weatherData["forecasts"][day]["detail"]["weather"];
+                bodyLabal.Text              = (string)weatherData["description"]["bodyText"];
                 
 
                 // 天気に応じた画像を表示します。

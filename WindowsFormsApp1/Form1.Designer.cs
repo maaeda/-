@@ -32,13 +32,14 @@
             this.components = new System.ComponentModel.Container();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timelabel = new System.Windows.Forms.Label();
-            this.titleLabal = new System.Windows.Forms.Label();
+            this.locationPrefecturLabel = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.morninglabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.bodyLabal = new System.Windows.Forms.Label();
             this.detailWeatherLabel = new System.Windows.Forms.Label();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.locationDistrictLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,23 +57,23 @@
             this.timelabel.AutoSize = true;
             this.timelabel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.timelabel.Font = new System.Drawing.Font("Meiryo UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.timelabel.Location = new System.Drawing.Point(202, 67);
+            this.timelabel.Location = new System.Drawing.Point(212, 22);
             this.timelabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.timelabel.Name = "timelabel";
             this.timelabel.Size = new System.Drawing.Size(329, 122);
             this.timelabel.TabIndex = 1;
             this.timelabel.Text = "label1";
             // 
-            // titleLabal
+            // locationPrefecturLabel
             // 
-            this.titleLabal.AutoSize = true;
-            this.titleLabal.Font = new System.Drawing.Font("Meiryo UI", 14F, System.Drawing.FontStyle.Bold);
-            this.titleLabal.Location = new System.Drawing.Point(120, 211);
-            this.titleLabal.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.titleLabal.Name = "titleLabal";
-            this.titleLabal.Size = new System.Drawing.Size(208, 48);
-            this.titleLabal.TabIndex = 1;
-            this.titleLabal.Text = "titleLabal";
+            this.locationPrefecturLabel.AutoSize = true;
+            this.locationPrefecturLabel.Font = new System.Drawing.Font("Meiryo UI", 14F, System.Drawing.FontStyle.Bold);
+            this.locationPrefecturLabel.Location = new System.Drawing.Point(120, 164);
+            this.locationPrefecturLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.locationPrefecturLabel.Name = "locationPrefecturLabel";
+            this.locationPrefecturLabel.Size = new System.Drawing.Size(369, 48);
+            this.locationPrefecturLabel.TabIndex = 1;
+            this.locationPrefecturLabel.Text = "locationPrefectur";
             // 
             // timer1
             // 
@@ -131,6 +132,17 @@
             this.webBrowser1.Size = new System.Drawing.Size(80, 60);
             this.webBrowser1.TabIndex = 4;
             // 
+            // locationDistrictLabel
+            // 
+            this.locationDistrictLabel.AutoSize = true;
+            this.locationDistrictLabel.Font = new System.Drawing.Font("Meiryo UI", 14F, System.Drawing.FontStyle.Bold);
+            this.locationDistrictLabel.Location = new System.Drawing.Point(120, 212);
+            this.locationDistrictLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.locationDistrictLabel.Name = "locationDistrictLabel";
+            this.locationDistrictLabel.Size = new System.Drawing.Size(327, 48);
+            this.locationDistrictLabel.TabIndex = 1;
+            this.locationDistrictLabel.Text = "locationDistrict";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
@@ -141,7 +153,8 @@
             this.Controls.Add(this.morninglabel);
             this.Controls.Add(this.detailWeatherLabel);
             this.Controls.Add(this.bodyLabal);
-            this.Controls.Add(this.titleLabal);
+            this.Controls.Add(this.locationDistrictLabel);
+            this.Controls.Add(this.locationPrefecturLabel);
             this.Controls.Add(this.timelabel);
             this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(6);
@@ -153,6 +166,8 @@
             this.PerformLayout();
         }
 
+        private System.Windows.Forms.Label locationDistrictLabel;
+
         private System.Windows.Forms.Label bodyLabal;
         private System.Windows.Forms.Label detailWeatherLabel;
 
@@ -160,7 +175,7 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label timelabel;
-        private System.Windows.Forms.Label titleLabal;
+        private System.Windows.Forms.Label locationPrefecturLabel;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label morninglabel;
         private System.Windows.Forms.Button button1;
