@@ -12,7 +12,6 @@ using Newtonsoft.Json;
 using System.Net.Http;
 using Newtonsoft.Json.Linq;
 
-
 namespace WindowsFormsApp1
 {
 
@@ -20,36 +19,57 @@ namespace WindowsFormsApp1
     {
 
         private readonly HttpClient _httpClient = new HttpClient();
+        static readonly string recipeCategoryUrl = $"https://app.rakuten.co.jp/services/api/Recipe/CategoryList/20170426?applicationId=1062554798332159397";
+
 
         string[] breakfastfoods = { "aaa", "bbb", "ccc" };// 朝ご飯を入れる大域変数
         string[] lunchfoods = { "aaa", "bbb", "ccc" };// 朝ご飯を入れる大域変数
         string[] dinnerfoods = { "aaa", "bbb", "ccc" };// 朝ご飯を入れる大域変数
 
-
         public Form1()
         {
-            
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private async void Form1_Load(object sender, EventArgs e)
         {
+
+
+
+            // 料理カテゴリの中からランダムでfoodlabelに表示させる処理
+            try
+            {
+                var response = await _httpClient.GetStringAsync(recipeCategoryUrl);
+                var data = JObject.Parse(response);
+                var categories = data["result"]["small"].ToObject<Category[]>();
+
+                var random = new Random();
+                var randomCategory = categories[random.Next(categories.Length)];
+
+                foodlabel.Text = "ID" + randomCategory.CategoryId + " " + randomCategory.CategoryName;
+            }
+            catch (HttpRequestException ex)
+            {
+                foodlabel.Text = "Message :{0} "+ ex.Message;
+            }
+
+
+
+
+
+
+
 
             /*画像の表示*/
             this.Text = ProductName;
-            //pictureBox1.Dock = DockStyle.Fill;    // フォームいっぱいに貼り付ける
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom; // 縦横比を変えずに引き延ばす
             pictureBox1.Image = Properties.Resources.test; //画像表示
             /************/
-
             /*API*/
-            string apiUrl = "https://app.rakuten.co.jp/services/api/Recipe/CategoryList/20170426?applicationId=1062554798332159397";
-
+            string foodApiUrl = "https://app.rakuten.co.jp/services/api/Recipe/CategoryList/20170426?applicationId=1062554798332159397";
             /*****/
 
             timer1.Start();
-            foodlabel.Text = " ";
-
         }
 
         private void timer1_tick(object sender, EventArgs e)
@@ -60,6 +80,7 @@ namespace WindowsFormsApp1
 
         private async void button1_Click(object sender, EventArgs e)
         {
+
 
             string apiUrl = "https://weather.tsukumijima.net/api/forecast/city/070010";
             try
@@ -103,6 +124,11 @@ namespace WindowsFormsApp1
                 MessageBox.Show($"エラーが発生しました: {ex.Message}");
             }
 
+        }
+        public class Category
+        {
+            public string CategoryName { get; set; }
+            public string CategoryId { get; set; }
         }
     }
 }
