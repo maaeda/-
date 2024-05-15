@@ -42,7 +42,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(473, 42);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(285, 150);
             this.pictureBox1.TabIndex = 0;
@@ -63,11 +63,11 @@
             // foodlabel
             // 
             this.foodlabel.AutoSize = true;
-            this.foodlabel.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.foodlabel.Location = new System.Drawing.Point(177, 154);
+            this.foodlabel.Font = new System.Drawing.Font("Meiryo UI", 14F, System.Drawing.FontStyle.Bold);
+            this.foodlabel.Location = new System.Drawing.Point(103, 162);
             this.foodlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.foodlabel.Name = "foodlabel";
-            this.foodlabel.Size = new System.Drawing.Size(53, 19);
+            this.foodlabel.Size = new System.Drawing.Size(89, 30);
             this.foodlabel.TabIndex = 1;
             this.foodlabel.Text = "label1";
             // 
@@ -104,7 +104,7 @@
             this.Controls.Add(this.foodlabel);
             this.Controls.Add(this.timelabel);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

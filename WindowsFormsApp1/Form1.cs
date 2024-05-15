@@ -46,7 +46,7 @@ namespace WindowsFormsApp1
                 var random = new Random();
                 var randomCategory = categories[random.Next(categories.Length)];
 
-                foodlabel.Text = "ID" + randomCategory.CategoryId + " " + randomCategory.CategoryName;
+                foodlabel.Text = "カテゴリID" + randomCategory.CategoryId + "　" + randomCategory.CategoryName;
             }
             catch (HttpRequestException ex)
             {
