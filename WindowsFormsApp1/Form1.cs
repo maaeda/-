@@ -36,33 +36,41 @@ namespace WindowsFormsApp1
 
         private async void Form1_Load(object sender, EventArgs e)
         {
-            // 料理カテゴリの中からランダムでfoodlabelに表示させる処理
+
+            string foodApiUrl = "https://app.rakuten.co.jp/services/api/Recipe/CategoryRanking/20170426?format=json&categoryId=10&pickup=0&applicationId=1062554798332159397";
             try
             {
-                var response = await _httpClient.GetStringAsync(recipeCategoryUrl);
-                var data = JObject.Parse(response);
-                var categories = data["result"]["small"].ToObject<Category[]>();
+                HttpResponseMessage response = await _httpClient.GetAsync(foodApiUrl);
+                response.EnsureSuccessStatusCode();
+                string responseBody = await response.Content.ReadAsStringAsync();
 
-                var random = new Random();
-                var randomCategory = categories[random.Next(categories.Length)];
+                // JSONデータを解析します。
+                JObject foodData = JObject.Parse(responseBody);
 
-                foodLabel.Text = "カテゴリID" + randomCategory.CategoryId + "　" + randomCategory.CategoryName;
+                // 「food」の項目を取得します。
+
+                /*取得の設定*/
+                int num = 0;
+                /*
+                 * 0
+                 * 1
+                 * 2
+                 */
+
+                foodPicutrebox.ImageLocation = (string)foodData["result"][num]["mediumImageUrl"];
+                foodLabel.Text               = (string)foodData["result"][num]["recipeDescription"];
+                /***********************/
             }
             catch (HttpRequestException ex)
             {
-                foodLabel.Text = "Message :{0} "+ ex.Message;
+                MessageBox.Show($"エラーが発生しました: {ex.Message}");
             }
-            /******************/
 
-            /*画像の表示　　今のところ使いません*/
+            /*画像の表示*/
             this.Text = ProductName;
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom; // 縦横比を変えずに引き延ばす
             pictureBox1.Image = Properties.Resources.test; //画像表示
             /************/
-
-            /*API*/
-            string foodApiUrl = "https://app.rakuten.co.jp/services/api/Recipe/CategoryList/20170426?applicationId=1062554798332159397";
-            /*****/
 
             /*天気取得*/
             string apiUrl = "https://weather.tsukumijima.net/api/forecast/city/070010";

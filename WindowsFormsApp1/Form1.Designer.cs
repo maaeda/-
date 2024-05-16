@@ -148,7 +148,7 @@
             //
             // foodPicutrebox
             //
-            this.foodPicutrebox.Location = new System.Drawing.Point(859, 485);
+            this.foodPicutrebox.Location = new System.Drawing.Point(838, 397);
             this.foodPicutrebox.Margin = new System.Windows.Forms.Padding(6);
             this.foodPicutrebox.Name = "foodPicutrebox";
             this.foodPicutrebox.Size = new System.Drawing.Size(100, 100);
