@@ -47,9 +47,10 @@ namespace WindowsFormsApp1
                  * 1
                  * 2
                  */
-
-                foodPicutrebox.ImageLocation = (string)foodData["result"][num]["mediumImageUrl"];
-                foodLabel.Text               = (string)foodData["result"][num]["recipeDescription"];
+                this.Text = ProductName;
+                foodPicutrebox.SizeMode = PictureBoxSizeMode.AutoSize;
+                foodPicutrebox.ImageLocation = (string)foodData["result"][num]["foodImageUrl"];
+                foodLabel.Text               = (string)foodData["result"][num]["recipeTitle"];
                 /***********************/
             }
             catch (HttpRequestException ex)
@@ -58,6 +59,7 @@ namespace WindowsFormsApp1
             }
 
             /*背景画像の表示*/
+            /*
             this.Text = ProductName;
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom; // 縦横比を変えずに引き延ばす
             pictureBox1.Image = Properties.Resources.test; //画像表示
@@ -113,9 +115,39 @@ namespace WindowsFormsApp1
             timelabel.Text = now.ToLongTimeString();
         }
 
+        int i = 0;
         private async void button1_Click(object sender, EventArgs e)
         {
+            i = ++i;
+                string foodApiUrl = "https://app.rakuten.co.jp/services/api/Recipe/CategoryRanking/20170426?format=json&categoryId=10&pickup=0&applicationId=1062554798332159397";
+                try
+                {
+                    HttpResponseMessage response = await _httpClient.GetAsync(foodApiUrl);
+                    response.EnsureSuccessStatusCode();
+                    string responseBody = await response.Content.ReadAsStringAsync();
 
+                    // JSONデータを解析します。
+                    JObject foodData = JObject.Parse(responseBody);
+
+                    // 「food」の項目を取得します。
+                    /*取得の設定*/
+                    int num = 1;
+                    /*
+                     * 0
+                     * 1
+                     * 2
+                     */
+                    this.Text = ProductName;
+                    foodPicutrebox.SizeMode = PictureBoxSizeMode.AutoSize;
+                    foodPicutrebox.ImageLocation = (string)foodData["result"][i]["foodImageUrl"];
+                    foodLabel.Text               = (string)foodData["result"][i]["recipeTitle"];
+                    /***********************/
+                }
+                catch (HttpRequestException ex)
+                {
+                    MessageBox.Show($"エラーが発生しました: {ex.Message}");
+                }
+            
         }
 
         public class Category
