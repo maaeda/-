@@ -17,17 +17,10 @@ using Svg;
 
 namespace WindowsFormsApp1
 {
-
     public partial class Form1 : Form
     {
-
         private readonly HttpClient _httpClient = new HttpClient();
-        static readonly string recipeCategoryUrl = $"https://app.rakuten.co.jp/services/api/Recipe/CategoryList/20170426?applicationId=1062554798332159397";
-
         string weatherImageUrl = "";
-        string[] breakfastfoods = { "aaa", "bbb", "ccc" };// 朝ご飯を入れる大域変数
-        string[] lunchfoods = { "aaa", "bbb", "ccc" };// 朝ご飯を入れる大域変数
-        string[] dinnerfoods = { "aaa", "bbb", "ccc" };// 朝ご飯を入れる大域変数
 
         public Form1()
         {
@@ -36,7 +29,6 @@ namespace WindowsFormsApp1
 
         private async void Form1_Load(object sender, EventArgs e)
         {
-
             string foodApiUrl = "https://app.rakuten.co.jp/services/api/Recipe/CategoryRanking/20170426?format=json&categoryId=10&pickup=0&applicationId=1062554798332159397";
             try
             {
@@ -48,7 +40,6 @@ namespace WindowsFormsApp1
                 JObject foodData = JObject.Parse(responseBody);
 
                 // 「food」の項目を取得します。
-
                 /*取得の設定*/
                 int num = 0;
                 /*
@@ -66,7 +57,7 @@ namespace WindowsFormsApp1
                 MessageBox.Show($"エラーが発生しました: {ex.Message}");
             }
 
-            /*画像の表示*/
+            /*背景画像の表示*/
             this.Text = ProductName;
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom; // 縦横比を変えずに引き延ばす
             pictureBox1.Image = Properties.Resources.test; //画像表示
