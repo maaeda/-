@@ -34,7 +34,7 @@
             this.timelabel = new System.Windows.Forms.Label();
             this.locationPrefecturLabel = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.morninglabel = new System.Windows.Forms.Label();
+            this.foodLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.bodyLabal = new System.Windows.Forms.Label();
             this.detailWeatherLabel = new System.Windows.Forms.Label();
@@ -79,15 +79,15 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_tick);
             // 
-            // morninglabel
+            // foodLabel
             // 
-            this.morninglabel.AutoSize = true;
-            this.morninglabel.Location = new System.Drawing.Point(871, 409);
-            this.morninglabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.morninglabel.Name = "morninglabel";
-            this.morninglabel.Size = new System.Drawing.Size(110, 24);
-            this.morninglabel.TabIndex = 2;
-            this.morninglabel.Text = "foods text";
+            this.foodLabel.AutoSize = true;
+            this.foodLabel.Location = new System.Drawing.Point(871, 409);
+            this.foodLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.foodLabel.Name = "foodLabel";
+            this.foodLabel.Size = new System.Drawing.Size(106, 24);
+            this.foodLabel.TabIndex = 2;
+            this.foodLabel.Text = "foodLabel";
             // 
             // button1
             // 
@@ -150,7 +150,7 @@
             this.ClientSize = new System.Drawing.Size(1376, 899);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.morninglabel);
+            this.Controls.Add(this.foodLabel);
             this.Controls.Add(this.detailWeatherLabel);
             this.Controls.Add(this.bodyLabal);
             this.Controls.Add(this.locationDistrictLabel);
@@ -177,7 +177,7 @@
         private System.Windows.Forms.Label timelabel;
         private System.Windows.Forms.Label locationPrefecturLabel;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label morninglabel;
+        private System.Windows.Forms.Label foodLabel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.WebBrowser webBrowser1;
     }

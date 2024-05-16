@@ -46,11 +46,11 @@ namespace WindowsFormsApp1
                 var random = new Random();
                 var randomCategory = categories[random.Next(categories.Length)];
 
-                locationPrefecturLabel.Text = "カテゴリID" + randomCategory.CategoryId + "　" + randomCategory.CategoryName;
+                foodLabel.Text = "カテゴリID" + randomCategory.CategoryId + "　" + randomCategory.CategoryName;
             }
             catch (HttpRequestException ex)
             {
-                locationPrefecturLabel.Text = "Message :{0} "+ ex.Message;
+                foodLabel.Text = "Message :{0} "+ ex.Message;
             }
             /******************/
 
@@ -142,7 +142,23 @@ namespace WindowsFormsApp1
 
         private async void button1_Click(object sender, EventArgs e)
         {
+            // 料理カテゴリの中からランダムでfoodlabelに表示させる処理
+            try
+            {
+                var response = await _httpClient.GetStringAsync(recipeCategoryUrl);
+                var data = JObject.Parse(response);
+                var categories = data["result"]["small"].ToObject<Category[]>();
 
+                var random = new Random();
+                var randomCategory = categories[random.Next(categories.Length)];
+
+                foodLabel.Text = "カテゴリID" + randomCategory.CategoryId + "　" + randomCategory.CategoryName;
+            }
+            catch (HttpRequestException ex)
+            {
+                foodLabel.Text = "Message :{0} "+ ex.Message;
+            }
+            /******************/
         }
 
         public class Category
