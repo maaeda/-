@@ -166,10 +166,5 @@ namespace WindowsFormsApp1
             public string CategoryName { get; set; }
             public string CategoryId { get; set; }
         }
-
-        private void locationPrefecturLabel_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

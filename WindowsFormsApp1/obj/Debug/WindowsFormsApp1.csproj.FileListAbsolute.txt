@@ -95,35 +95,3 @@ C:\Users\pyu56\Documents\GitHub\Best-meal\WindowsFormsApp1\obj\Debug\WindowsF.A1
 C:\Users\pyu56\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\ExCSS.dll
 C:\Users\pyu56\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\Svg.dll
 C:\Users\pyu56\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\Svg.xml
-C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
-C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
-C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
-C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\bin\Debug\ExCSS.dll
-C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.Bson.dll
-C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.dll
-C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\bin\Debug\Svg.dll
-C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\bin\Debug\System.Buffers.dll
-C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\bin\Debug\System.Memory.dll
-C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\bin\Debug\System.Net.Http.Formatting.dll
-C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.xml
-C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.Bson.pdb
-C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.Bson.xml
-C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\bin\Debug\Svg.xml
-C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\bin\Debug\System.Buffers.xml
-C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\bin\Debug\System.Memory.xml
-C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\bin\Debug\System.Net.Http.Formatting.xml
-C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\bin\Debug\System.Numerics.Vectors.xml
-C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
-C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
-C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
-C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
-C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
-C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
-C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
-C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
-C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
