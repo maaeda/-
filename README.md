@@ -9,13 +9,13 @@
 
 ## 使用したAPI
 
-> [!IMPORTANT]
-> Rakuten APIにはリクエスト制限があります。
-> 1秒に1回以下のリクエストとしてください。
-
 - [Rakuten Recipe APIs](https://webservice.rakuten.co.jp/documentation)
 
 - [天気予報 API（livedoor 天気互換)](https://weather.tsukumijima.net/)
+
+> [!IMPORTANT]
+> Rakuten APIにはリクエスト制限があります。
+> 1秒に1回以下のリクエストとしてください。
 
 ## 使用したライブラリ？
 
