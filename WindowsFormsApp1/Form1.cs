@@ -209,7 +209,7 @@ namespace WindowsFormsApp1
                 string foodApiUrl = $"https://app.rakuten.co.jp/services/api/Recipe/CategoryRanking/20170426?format=json&categoryId={season}&pickup=0&applicationId=1062554798332159397";
                 try
                 {
-                foodNum = ++foodNum;
+                
                 HttpResponseMessage response = await _httpClient.GetAsync(foodApiUrl);
                     response.EnsureSuccessStatusCode();
                     string responseBody = await response.Content.ReadAsStringAsync();
@@ -217,9 +217,15 @@ namespace WindowsFormsApp1
                     // JSONデータを解析します。
                     JObject foodData = JObject.Parse(responseBody);
 
-                    // 「food」の項目を取得します。
+                foodNum = ++foodNum;
+                if (foodNum > 3)
+                {
+                    foodNum = 0;
+                }
 
-                    this.Text = ProductName;
+                // 「food」の項目を取得します。
+
+                this.Text = ProductName;
                     foodPicutrebox.SizeMode = PictureBoxSizeMode.AutoSize;
                     foodPicutrebox.ImageLocation = (string)foodData["result"][foodNum]["foodImageUrl"];
                     foodLabel.Text               = (string)foodData["result"][foodNum]["recipeTitle"];
@@ -230,10 +236,7 @@ namespace WindowsFormsApp1
                     MessageBox.Show($"エラーが発生しました: {ex.Message}");
                 }
 
-                if (foodNum >= 3)
-                {
-                    foodNum = -1;
-                }
+               
             
         }
 
