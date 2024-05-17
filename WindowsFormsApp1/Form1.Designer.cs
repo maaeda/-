@@ -90,9 +90,9 @@
             this.foodLabel.Size = new System.Drawing.Size(106, 24);
             this.foodLabel.TabIndex = 2;
             this.foodLabel.Text = "foodLabel";
-            //
+            // 
             // button1
-            //
+            // 
             this.button1.Location = new System.Drawing.Point(835, 343);
             this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Name = "button1";
@@ -101,9 +101,9 @@
             this.button1.Text = "朝の食事一覧";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            //
+            // 
             // bodyLabal
-            //
+            // 
             this.bodyLabal.Font = new System.Drawing.Font("Meiryo UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.bodyLabal.Location = new System.Drawing.Point(32, 343);
             this.bodyLabal.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
@@ -111,9 +111,9 @@
             this.bodyLabal.Size = new System.Drawing.Size(739, 496);
             this.bodyLabal.TabIndex = 1;
             this.bodyLabal.Text = "bodyLabal";
-            //
+            // 
             // detailWeatherLabel
-            //
+            // 
             this.detailWeatherLabel.AutoSize = true;
             this.detailWeatherLabel.Font = new System.Drawing.Font("Meiryo UI", 14F, System.Drawing.FontStyle.Bold);
             this.detailWeatherLabel.Location = new System.Drawing.Point(120, 284);
@@ -122,9 +122,9 @@
             this.detailWeatherLabel.Size = new System.Drawing.Size(411, 48);
             this.detailWeatherLabel.TabIndex = 1;
             this.detailWeatherLabel.Text = "detailWeatherLabel";
-            //
+            // 
             // weatherIconWeb
-            //
+            // 
             this.weatherIconWeb.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.weatherIconWeb.AllowNavigation = false;
             this.weatherIconWeb.AllowWebBrowserDrop = false;
@@ -134,9 +134,9 @@
             this.weatherIconWeb.Name = "weatherIconWeb";
             this.weatherIconWeb.Size = new System.Drawing.Size(80, 60);
             this.weatherIconWeb.TabIndex = 4;
-            //
+            // 
             // locationDistrictLabel
-            //
+            // 
             this.locationDistrictLabel.AutoSize = true;
             this.locationDistrictLabel.Font = new System.Drawing.Font("Meiryo UI", 14F, System.Drawing.FontStyle.Bold);
             this.locationDistrictLabel.Location = new System.Drawing.Point(120, 212);
@@ -145,9 +145,9 @@
             this.locationDistrictLabel.Size = new System.Drawing.Size(327, 48);
             this.locationDistrictLabel.TabIndex = 1;
             this.locationDistrictLabel.Text = "locationDistrict";
-            //
+            // 
             // foodPicutrebox
-            //
+            // 
             this.foodPicutrebox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.foodPicutrebox.Location = new System.Drawing.Point(835, 427);
             this.foodPicutrebox.Margin = new System.Windows.Forms.Padding(6);

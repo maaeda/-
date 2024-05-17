@@ -130,13 +130,7 @@ namespace WindowsFormsApp1
                     JObject foodData = JObject.Parse(responseBody);
 
                     // 「food」の項目を取得します。
-                    /*取得の設定*/
-                    int num = 1;
-                    /*
-                     * 0
-                     * 1
-                     * 2
-                     */
+
                     this.Text = ProductName;
                     foodPicutrebox.SizeMode = PictureBoxSizeMode.AutoSize;
                     foodPicutrebox.ImageLocation = (string)foodData["result"][i]["foodImageUrl"];
