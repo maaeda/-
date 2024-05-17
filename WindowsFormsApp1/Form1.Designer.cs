@@ -49,10 +49,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(1, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(-2, -1);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1050, 594);
+            this.pictureBox1.Size = new System.Drawing.Size(1050, 668);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -151,10 +151,10 @@
             // foodPicutrebox
             // 
             this.foodPicutrebox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.foodPicutrebox.Location = new System.Drawing.Point(514, 207);
+            this.foodPicutrebox.Location = new System.Drawing.Point(514, 206);
             this.foodPicutrebox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.foodPicutrebox.Name = "foodPicutrebox";
-            this.foodPicutrebox.Size = new System.Drawing.Size(123, 94);
+            this.foodPicutrebox.Size = new System.Drawing.Size(471, 453);
             this.foodPicutrebox.TabIndex = 0;
             this.foodPicutrebox.TabStop = false;
             // 
@@ -182,7 +182,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1049, 592);
+            this.ClientSize = new System.Drawing.Size(1049, 673);
             this.Controls.Add(this.datelabel);
             this.Controls.Add(this.monthrecipelabel);
             this.Controls.Add(this.weatherIconWeb);

@@ -114,8 +114,6 @@ namespace WindowsFormsApp1
                 }
 
 
-
-
                 string weatherDetail = (string)weatherData["forecasts"][day]["telop"];
 
                 weatherImageUrl             = (string)weatherData["forecasts"][day]["image"]["url"];
@@ -155,7 +153,7 @@ namespace WindowsFormsApp1
                 // 「food」の項目を取得します。
 
                 this.Text = ProductName;
-                foodPicutrebox.SizeMode = PictureBoxSizeMode.AutoSize;
+                foodPicutrebox.SizeMode = PictureBoxSizeMode.Zoom;
                 foodPicutrebox.ImageLocation = (string)foodData["result"][foodNum]["foodImageUrl"];
                 foodLabel.Text = (string)foodData["result"][foodNum]["recipeTitle"];
                 /***********************/
@@ -226,7 +224,7 @@ namespace WindowsFormsApp1
                 // 「food」の項目を取得します。
 
                 this.Text = ProductName;
-                    foodPicutrebox.SizeMode = PictureBoxSizeMode.AutoSize;
+                    foodPicutrebox.SizeMode = PictureBoxSizeMode.Zoom;
                     foodPicutrebox.ImageLocation = (string)foodData["result"][foodNum]["foodImageUrl"];
                     foodLabel.Text               = (string)foodData["result"][foodNum]["recipeTitle"];
                     /***********************/
