@@ -41,6 +41,8 @@
             this.weatherIconWeb = new System.Windows.Forms.WebBrowser();
             this.locationDistrictLabel = new System.Windows.Forms.Label();
             this.foodPicutrebox = new System.Windows.Forms.PictureBox();
+            this.monthrecipelabel = new System.Windows.Forms.Label();
+            this.datelabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.foodPicutrebox)).BeginInit();
             this.SuspendLayout();
@@ -48,9 +50,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(1, -1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1706, 951);
+            this.pictureBox1.Size = new System.Drawing.Size(1050, 594);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -59,10 +61,10 @@
             this.timelabel.AutoSize = true;
             this.timelabel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.timelabel.Font = new System.Drawing.Font("Meiryo UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.timelabel.Location = new System.Drawing.Point(212, 22);
-            this.timelabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.timelabel.Location = new System.Drawing.Point(504, 14);
+            this.timelabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.timelabel.Name = "timelabel";
-            this.timelabel.Size = new System.Drawing.Size(329, 122);
+            this.timelabel.Size = new System.Drawing.Size(207, 77);
             this.timelabel.TabIndex = 1;
             this.timelabel.Text = "label1";
             // 
@@ -70,10 +72,10 @@
             // 
             this.locationPrefecturLabel.AutoSize = true;
             this.locationPrefecturLabel.Font = new System.Drawing.Font("Meiryo UI", 14F, System.Drawing.FontStyle.Bold);
-            this.locationPrefecturLabel.Location = new System.Drawing.Point(120, 164);
-            this.locationPrefecturLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.locationPrefecturLabel.Location = new System.Drawing.Point(74, 102);
+            this.locationPrefecturLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.locationPrefecturLabel.Name = "locationPrefecturLabel";
-            this.locationPrefecturLabel.Size = new System.Drawing.Size(369, 48);
+            this.locationPrefecturLabel.Size = new System.Drawing.Size(229, 30);
             this.locationPrefecturLabel.TabIndex = 1;
             this.locationPrefecturLabel.Text = "locationPrefectur";
             // 
@@ -84,31 +86,30 @@
             // foodLabel
             // 
             this.foodLabel.AutoSize = true;
-            this.foodLabel.Location = new System.Drawing.Point(835, 397);
-            this.foodLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.foodLabel.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.foodLabel.Location = new System.Drawing.Point(513, 178);
             this.foodLabel.Name = "foodLabel";
-            this.foodLabel.Size = new System.Drawing.Size(106, 24);
+            this.foodLabel.Size = new System.Drawing.Size(115, 24);
             this.foodLabel.TabIndex = 2;
             this.foodLabel.Text = "foodLabel";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(835, 343);
-            this.button1.Margin = new System.Windows.Forms.Padding(5);
+            this.button1.Location = new System.Drawing.Point(517, 123);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(179, 37);
+            this.button1.Size = new System.Drawing.Size(150, 23);
             this.button1.TabIndex = 3;
-            this.button1.Text = "朝の食事一覧";
+            this.button1.Text = "別のレシピを見る";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // bodyLabal
             // 
             this.bodyLabal.Font = new System.Drawing.Font("Meiryo UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.bodyLabal.Location = new System.Drawing.Point(32, 343);
-            this.bodyLabal.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.bodyLabal.Location = new System.Drawing.Point(20, 214);
+            this.bodyLabal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.bodyLabal.Name = "bodyLabal";
-            this.bodyLabal.Size = new System.Drawing.Size(739, 496);
+            this.bodyLabal.Size = new System.Drawing.Size(455, 310);
             this.bodyLabal.TabIndex = 1;
             this.bodyLabal.Text = "bodyLabal";
             // 
@@ -116,10 +117,10 @@
             // 
             this.detailWeatherLabel.AutoSize = true;
             this.detailWeatherLabel.Font = new System.Drawing.Font("Meiryo UI", 14F, System.Drawing.FontStyle.Bold);
-            this.detailWeatherLabel.Location = new System.Drawing.Point(120, 284);
-            this.detailWeatherLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.detailWeatherLabel.Location = new System.Drawing.Point(74, 178);
+            this.detailWeatherLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.detailWeatherLabel.Name = "detailWeatherLabel";
-            this.detailWeatherLabel.Size = new System.Drawing.Size(411, 48);
+            this.detailWeatherLabel.Size = new System.Drawing.Size(256, 30);
             this.detailWeatherLabel.TabIndex = 1;
             this.detailWeatherLabel.Text = "detailWeatherLabel";
             // 
@@ -129,38 +130,61 @@
             this.weatherIconWeb.AllowNavigation = false;
             this.weatherIconWeb.AllowWebBrowserDrop = false;
             this.weatherIconWeb.CausesValidation = false;
-            this.weatherIconWeb.Location = new System.Drawing.Point(12, 272);
-            this.weatherIconWeb.MinimumSize = new System.Drawing.Size(20, 20);
+            this.weatherIconWeb.Location = new System.Drawing.Point(7, 170);
+            this.weatherIconWeb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.weatherIconWeb.MinimumSize = new System.Drawing.Size(12, 12);
             this.weatherIconWeb.Name = "weatherIconWeb";
-            this.weatherIconWeb.Size = new System.Drawing.Size(80, 60);
+            this.weatherIconWeb.Size = new System.Drawing.Size(49, 38);
             this.weatherIconWeb.TabIndex = 4;
             // 
             // locationDistrictLabel
             // 
             this.locationDistrictLabel.AutoSize = true;
             this.locationDistrictLabel.Font = new System.Drawing.Font("Meiryo UI", 14F, System.Drawing.FontStyle.Bold);
-            this.locationDistrictLabel.Location = new System.Drawing.Point(120, 212);
-            this.locationDistrictLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.locationDistrictLabel.Location = new System.Drawing.Point(74, 132);
+            this.locationDistrictLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.locationDistrictLabel.Name = "locationDistrictLabel";
-            this.locationDistrictLabel.Size = new System.Drawing.Size(327, 48);
+            this.locationDistrictLabel.Size = new System.Drawing.Size(203, 30);
             this.locationDistrictLabel.TabIndex = 1;
             this.locationDistrictLabel.Text = "locationDistrict";
             // 
             // foodPicutrebox
             // 
             this.foodPicutrebox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.foodPicutrebox.Location = new System.Drawing.Point(835, 427);
-            this.foodPicutrebox.Margin = new System.Windows.Forms.Padding(6);
+            this.foodPicutrebox.Location = new System.Drawing.Point(514, 207);
+            this.foodPicutrebox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.foodPicutrebox.Name = "foodPicutrebox";
-            this.foodPicutrebox.Size = new System.Drawing.Size(200, 150);
+            this.foodPicutrebox.Size = new System.Drawing.Size(123, 94);
             this.foodPicutrebox.TabIndex = 0;
             this.foodPicutrebox.TabStop = false;
             // 
+            // monthrecipelabel
+            // 
+            this.monthrecipelabel.AutoSize = true;
+            this.monthrecipelabel.Font = new System.Drawing.Font("Meiryo UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monthrecipelabel.Location = new System.Drawing.Point(513, 149);
+            this.monthrecipelabel.Name = "monthrecipelabel";
+            this.monthrecipelabel.Size = new System.Drawing.Size(72, 24);
+            this.monthrecipelabel.TabIndex = 5;
+            this.monthrecipelabel.Text = "label1";
+            // 
+            // datelabel
+            // 
+            this.datelabel.AutoSize = true;
+            this.datelabel.Font = new System.Drawing.Font("Meiryo UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.datelabel.Location = new System.Drawing.Point(66, 14);
+            this.datelabel.Name = "datelabel";
+            this.datelabel.Size = new System.Drawing.Size(207, 77);
+            this.datelabel.TabIndex = 6;
+            this.datelabel.Text = "label1";
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1704, 948);
+            this.ClientSize = new System.Drawing.Size(1049, 592);
+            this.Controls.Add(this.datelabel);
+            this.Controls.Add(this.monthrecipelabel);
             this.Controls.Add(this.weatherIconWeb);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.foodLabel);
@@ -171,7 +195,7 @@
             this.Controls.Add(this.timelabel);
             this.Controls.Add(this.foodPicutrebox);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(6);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -179,6 +203,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.foodPicutrebox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         private System.Windows.Forms.PictureBox foodPicutrebox;
@@ -199,5 +224,7 @@
         private System.Windows.Forms.Label foodLabel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.Label monthrecipelabel;
+        private System.Windows.Forms.Label datelabel;
     }
 }

@@ -158,3 +158,6 @@ C:\Users\pyu56\Downloads\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.c
 C:\Users\pyu56\Downloads\Best-meal\WindowsFormsApp1\obj\Debug\WindowsF.A1EEDF9B.Up2Date
 C:\Users\pyu56\Downloads\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\pyu56\Downloads\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\inbed\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\ExCSS.dll
+C:\Users\inbed\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\Svg.dll
+C:\Users\inbed\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\Svg.xml
