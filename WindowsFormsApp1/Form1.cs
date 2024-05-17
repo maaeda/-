@@ -21,6 +21,8 @@ namespace WindowsFormsApp1
     {
         private readonly HttpClient _httpClient = new HttpClient();
         string weatherImageUrl = "";
+        /*numに代入された番号のレシピを介します。デフォルトは0です。*/
+        int foodNum = 0;
 
         public Form1()
         {
@@ -40,22 +42,45 @@ namespace WindowsFormsApp1
                 JObject foodData = JObject.Parse(responseBody);
 
                 // 「food」の項目を取得します。
-                /*取得の設定*/
-                int num = 0;
-                /*
-                 * 0
-                 * 1
-                 * 2
-                 */
+
                 this.Text = ProductName;
                 foodPicutrebox.SizeMode = PictureBoxSizeMode.AutoSize;
-                foodPicutrebox.ImageLocation = (string)foodData["result"][num]["foodImageUrl"];
-                foodLabel.Text               = (string)foodData["result"][num]["recipeTitle"];
+                foodPicutrebox.ImageLocation = (string)foodData["result"][foodNum]["foodImageUrl"];
+                foodLabel.Text               = (string)foodData["result"][foodNum]["recipeTitle"];
                 /***********************/
             }
             catch (HttpRequestException ex)
             {
-                MessageBox.Show($"エラーが発生しました: {ex.Message}");
+                switch (ex.Message)
+                {
+                    case "400":
+                        MessageBox.Show($"パラメーターエラーが発生しました。エラーコード。: {ex.Message}");
+                        break;
+
+                    case "401":
+                        MessageBox.Show($"不正なトークンによるエラーが発生しました。エラーコード: {ex.Message}");
+                        break;
+
+                    case "403":
+                        MessageBox.Show($"許可スコープが十分ではありません。エラーコード: {ex.Message}");
+                        break;
+
+                    case "503":
+                        MessageBox.Show($"APIメンテンス。エラーコード: {ex.Message}");
+                        break;
+
+                    case "500":
+                        MessageBox.Show($"APIトラブル。エラーコード: {ex.Message}");
+                        break;
+
+                    case "429":
+                        MessageBox.Show($"APIリクエスト制限。エラーコード: {ex.Message}");
+                        break;
+
+                    default:
+                        MessageBox.Show($"予期せぬエラーが発生しました。エラーコード: {ex.Message}");
+                        break;
+                }
             }
 
             /*背景画像の表示*/
@@ -115,11 +140,10 @@ namespace WindowsFormsApp1
             timelabel.Text = now.ToLongTimeString();
         }
 
-        int i = 0;
         private async void button1_Click(object sender, EventArgs e)
         {
-            i = ++i;
-                string foodApiUrl = "https://app.rakuten.co.jp/services/api/Recipe/CategoryRanking/20170426?format=json&categoryId=10&pickup=0&applicationId=1062554798332159397";
+            foodNum = ++foodNum;
+                string foodApiUrl = "https://app.rakuten.co.jp/services/api/Recipe/CategoryRanking/20170426?format=json&categoryId=55&pickup=0&applicationId=1062554798332159397";
                 try
                 {
                     HttpResponseMessage response = await _httpClient.GetAsync(foodApiUrl);
@@ -133,13 +157,18 @@ namespace WindowsFormsApp1
 
                     this.Text = ProductName;
                     foodPicutrebox.SizeMode = PictureBoxSizeMode.AutoSize;
-                    foodPicutrebox.ImageLocation = (string)foodData["result"][i]["foodImageUrl"];
-                    foodLabel.Text               = (string)foodData["result"][i]["recipeTitle"];
+                    foodPicutrebox.ImageLocation = (string)foodData["result"][foodNum]["foodImageUrl"];
+                    foodLabel.Text               = (string)foodData["result"][foodNum]["recipeTitle"];
                     /***********************/
                 }
                 catch (HttpRequestException ex)
                 {
                     MessageBox.Show($"エラーが発生しました: {ex.Message}");
+                }
+
+                if (foodNum >= 3)
+                {
+                    foodNum = -1;
                 }
             
         }
