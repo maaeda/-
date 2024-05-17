@@ -206,11 +206,11 @@ namespace WindowsFormsApp1
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            foodNum = ++foodNum;
                 string foodApiUrl = $"https://app.rakuten.co.jp/services/api/Recipe/CategoryRanking/20170426?format=json&categoryId={season}&pickup=0&applicationId=1062554798332159397";
                 try
                 {
-                    HttpResponseMessage response = await _httpClient.GetAsync(foodApiUrl);
+                foodNum = ++foodNum;
+                HttpResponseMessage response = await _httpClient.GetAsync(foodApiUrl);
                     response.EnsureSuccessStatusCode();
                     string responseBody = await response.Content.ReadAsStringAsync();
 
