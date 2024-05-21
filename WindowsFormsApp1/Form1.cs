@@ -169,6 +169,13 @@ namespace WindowsFormsApp1
                 foodPicutrebox.ImageLocation = (string)foodData["result"][foodNum]["foodImageUrl"];
                 foodLabel.Text = (string)foodData["result"][foodNum]["recipeTitle"];
                 /***********************/
+                /*通知*/
+                new ToastContentBuilder()
+                    .AddText("作れるもんなら作ってみな!")
+                    .AddText((string)foodData["result"][foodNum]["recipeTitle"])
+                    //.AddAppLogoOverride(new Uri((string)foodData["result"][foodNum]["foodImageUrl"]), ToastGenericAppLogoCrop.Circle);
+                    .Show();
+
             }
             catch (HttpRequestException ex)
             {
@@ -220,7 +227,7 @@ namespace WindowsFormsApp1
                 try
                 {
                 
-                HttpResponseMessage response = await _httpClient.GetAsync(foodApiUrl);
+                    HttpResponseMessage response = await _httpClient.GetAsync(foodApiUrl);
                     response.EnsureSuccessStatusCode();
                     string responseBody = await response.Content.ReadAsStringAsync();
 
@@ -240,18 +247,18 @@ namespace WindowsFormsApp1
                     foodPicutrebox.ImageLocation = (string)foodData["result"][foodNum]["foodImageUrl"];
                     foodLabel.Text               = (string)foodData["result"][foodNum]["recipeTitle"];
                     /***********************/
+                    /*通知*/
+                    new ToastContentBuilder()
+                        .AddText("作れるもんなら作ってみな!")
+                        .AddText((string)foodData["result"][foodNum]["recipeTitle"])
+                        //.AddAppLogoOverride(new Uri((string)foodData["result"][foodNum]["foodImageUrl"]), ToastGenericAppLogoCrop.Circle);
+                        .Show();
+
                 }
                 catch (HttpRequestException ex)
                 {
                     MessageBox.Show($"エラーが発生しました: {ex.Message}");
                 }
-
-            /*通知*/
-            new ToastContentBuilder()
-                .AddText("My Toast")
-                .AddText("Hello Toast!")
-                .Show();
-
         }
 
         public class Category
