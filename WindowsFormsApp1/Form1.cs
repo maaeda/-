@@ -15,6 +15,7 @@ using System.IO;
 using System.Net;
 using Svg;
 using Microsoft.Toolkit.Uwp.Notifications;
+using System.Diagnostics;
 
 
 namespace WindowsFormsApp1
@@ -301,6 +302,31 @@ namespace WindowsFormsApp1
         {
             public string CategoryName { get; set; }
             public string CategoryId { get; set; }
+        }
+
+        private async void button2_Click(object sender, EventArgs e)
+        {
+            string foodApiUrl = $"https://app.rakuten.co.jp/services/api/Recipe/CategoryRanking/20170426?format=json&categoryId={season}&pickup=0&applicationId=1062554798332159397";
+            try
+            {
+
+                HttpResponseMessage response = await _httpClient.GetAsync(foodApiUrl);
+                response.EnsureSuccessStatusCode();
+                string responseBody = await response.Content.ReadAsStringAsync();
+                JObject foodData = JObject.Parse(responseBody);
+
+                // リンクを既定のブラウザで開く
+                Process.Start((string)foodData["result"][foodNum]["recipeUrl"]);
+            }
+            catch (HttpRequestException ex)
+            {
+                MessageBox.Show($"エラーが発生しました: {ex.Message}");
+            }
+        }
+
+        private void weatherIconWeb_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
         }
     }
 }
