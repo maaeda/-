@@ -165,7 +165,7 @@ namespace WindowsFormsApp1
                 new ToastContentBuilder()
                     .AddText("作れるもんなら作ってみな!")
                     .AddText((string)foodData["result"][foodNum]["recipeTitle"])
-                    //.AddAppLogoOverride(new Uri((string)foodData["result"][foodNum]["foodImageUrl"]), ToastGenericAppLogoCrop.Circle);
+                    //AddHeroImage(new Uri("https://learn.microsoft.com/ja-jp/windows/apps/design/shell/tiles-and-notifications/images/toast-content-hero-image.png"))
                     .Show();
 
             }
@@ -243,7 +243,7 @@ namespace WindowsFormsApp1
                     new ToastContentBuilder()
                         .AddText("作れるもんなら作ってみな!")
                         .AddText((string)foodData["result"][foodNum]["recipeTitle"])
-                        //.AddAppLogoOverride(new Uri((string)foodData["result"][foodNum]["foodImageUrl"]), ToastGenericAppLogoCrop.Circle);
+                        //.AddAppLogoOverride(new Uri((string)foodData["result"][foodNum]["foodImageUrl"]), ToastGenericAppLogoCrop.Circle)
                         .Show();
 
                 }
