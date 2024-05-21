@@ -280,5 +280,10 @@ namespace WindowsFormsApp1
                 MessageBox.Show($"エラーが発生しました: {ex.Message}");
             }
         }
+
+        private void weatherIconWeb_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
     }
 }
