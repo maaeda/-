@@ -180,6 +180,11 @@ namespace WindowsFormsApp1
                     .AddText((string)foodData["result"][foodNum]["recipeTitle"])
                     //.AddAppLogoOverride(new Uri((string)foodData["result"][foodNum]["foodImageUrl"]), ToastGenericAppLogoCrop.Circle);
                     .Show();
+                new ToastContentBuilder()
+                    .AddText("作れるもんなら作ってみな!")
+                    .AddText((string)foodData["result"][foodNum]["recipeTitle"])
+                    //.AddAppLogoOverride(new Uri((string)foodData["result"][foodNum]["foodImageUrl"]), ToastGenericAppLogoCrop.Circle);
+                    .Show();
 
             }
             catch (HttpRequestException ex)
