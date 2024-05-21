@@ -41,14 +41,6 @@ namespace WindowsFormsApp1
         private async void Form1_Load(object sender, EventArgs e)
         {
 
-            
-            
-
-            
-
-
-            
-
             /*背景画像の表示*/
             /*
             this.Text = ProductName;
@@ -170,6 +162,14 @@ namespace WindowsFormsApp1
                 foodPicutrebox.ImageLocation = (string)foodData["result"][foodNum]["foodImageUrl"];
                 foodLabel.Text = (string)foodData["result"][foodNum]["recipeTitle"];
                 /***********************/
+                /*通知*/
+                new ToastContentBuilder()
+                    .AddText("作れるもんなら作ってみな!")
+                    .AddText((string)foodData["result"][foodNum]["recipeTitle"])
+                    //.AddInlineImage(new Uri((string)foodData["result"][foodNum]["foodImageUrl"]))
+                    //AddHeroImage(new Uri("https://learn.microsoft.com/ja-jp/windows/apps/design/shell/tiles-and-notifications/images/toast-content-hero-image.png"))
+                    .Show();
+
             }
             catch (HttpRequestException ex)
             {
@@ -221,7 +221,7 @@ namespace WindowsFormsApp1
                 try
                 {
                 
-                HttpResponseMessage response = await _httpClient.GetAsync(foodApiUrl);
+                    HttpResponseMessage response = await _httpClient.GetAsync(foodApiUrl);
                     response.EnsureSuccessStatusCode();
                     string responseBody = await response.Content.ReadAsStringAsync();
 
@@ -241,18 +241,61 @@ namespace WindowsFormsApp1
                     foodPicutrebox.ImageLocation = (string)foodData["result"][foodNum]["foodImageUrl"];
                     foodLabel.Text               = (string)foodData["result"][foodNum]["recipeTitle"];
                     /***********************/
+
+                    /*notiImageに画像を入れる*/
+                    var notiImage = loadImageFromURL((string)foodData["result"][foodNum]["foodImageUrl"]);
+                    //pictureBox1.Image = notiImage;
+
+                    /*通知*/
+                    new ToastContentBuilder()
+                        .AddText("作れるもんなら作ってみな!")
+                        .AddText((string)foodData["result"][foodNum]["recipeTitle"])
+                        //.AddInlineImage(new Uri("fille:///Resources/test.jpg"))
+                        .Show();
+
                 }
                 catch (HttpRequestException ex)
                 {
                     MessageBox.Show($"エラーが発生しました: {ex.Message}");
                 }
+        }
 
-            /*通知*/
-            new ToastContentBuilder()
-                .AddText("My Toast")
-                .AddText("Hello Toast!")
-                .Show();
+        /*リンク画像をimage型に変換　*/
+        public static System.Drawing.Image loadImageFromURL( string url ) {
+            int buffSize = 65536; // 一度に読み込むサイズ
+            MemoryStream imgStream = new MemoryStream();
 
+            //------------------------
+            // パラメータチェック
+            //------------------------
+            if ( url == null || url.Trim().Length <= 0 ) {
+                return null;
+            }
+
+            //----------------------------
+            // Webサーバに要求を投げる
+            //----------------------------
+            WebRequest req = WebRequest.Create( url );
+            BinaryReader reader = new BinaryReader( req.GetResponse().GetResponseStream() );
+
+            //--------------------------------------------------------
+            // Webサーバからの応答データを取得し、imgStreamに保存する
+            //--------------------------------------------------------
+            while ( true ) {
+                byte[] buff = new byte[ buffSize ];
+
+                // 応答データの取得
+                int readBytes = reader.Read( buff, 0, buffSize );
+                if ( readBytes <= 0 ) {
+                    // 最後まで取得した->ループを抜ける
+                    break;
+                }
+
+                // バッファに追加
+                imgStream.Write( buff, 0, readBytes );
+            }
+
+            return new Bitmap( imgStream );
         }
 
         public class Category
