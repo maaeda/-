@@ -40,14 +40,6 @@ namespace WindowsFormsApp1
         private async void Form1_Load(object sender, EventArgs e)
         {
 
-            
-            
-
-            
-
-
-            
-
             /*背景画像の表示*/
             /*
             this.Text = ProductName;
