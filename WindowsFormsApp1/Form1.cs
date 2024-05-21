@@ -14,6 +14,8 @@ using Newtonsoft.Json.Linq;
 using System.IO;
 using System.Net;
 using Svg;
+using Microsoft.Toolkit.Uwp.Notifications;
+
 
 namespace WindowsFormsApp1
 {
@@ -244,8 +246,12 @@ namespace WindowsFormsApp1
                     MessageBox.Show($"エラーが発生しました: {ex.Message}");
                 }
 
-               
-            
+            /*通知*/
+            new ToastContentBuilder()
+                .AddText("My Toast")
+                .AddText("Hello Toast!")
+                .Show();
+
         }
 
         public class Category
