@@ -135,6 +135,16 @@ namespace WindowsFormsApp1
 
             /*天気ロゴを表示*/
             weatherIconWeb.Navigate(weatherImageUrl);
+            /*
+            // PictureBoxをフォームに追加し、SizeModeをStretchImageに設定します。
+            weatherPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            // SVGファイルを読み込みます。
+            var svgDocument = SvgDocument.Open(weatherImageUrl);
+            // SVGをBitmapに変換します。
+            Bitmap bmp = svgDocument.Draw();
+            // PictureBoxに表示します。
+            weatherPictureBox.Image = bmp;
+            */
             /*************/
 
             // 上で取得した月をもとにリンクを取得 ------------------------------------------------------------------------------ ↓↓↓ここにseason変数が代入され、季節別にURLに変わる
