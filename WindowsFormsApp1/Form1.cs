@@ -161,7 +161,7 @@ namespace WindowsFormsApp1
                 JObject annivData = JObject.Parse(responseBody);
 
                 /*今日は何の日*/
-                whatTodayLabel.Text = (string)annivData["_items"][0]["anniv1"];
+                whatTodayLabel.Text = "今日は..."+(string)annivData["_items"][0]["anniv1"];
 
             }
             catch (HttpRequestException ex)
