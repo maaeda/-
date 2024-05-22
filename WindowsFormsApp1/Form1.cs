@@ -52,6 +52,9 @@ namespace WindowsFormsApp1
             locationDistrictLabel.BackColor = Color.Transparent;
             locationPrefecturLabel.BackColor = Color.Transparent;
 
+            string month;
+            string toDay = 0.ToString();
+
             /*天気取得*/
 
             try
@@ -78,7 +81,8 @@ namespace WindowsFormsApp1
                 string date = (string)weatherData["forecasts"][day]["date"];
                 int startindex= 5;
                 int monthlength = 2;
-                string month = date.Substring(startindex, monthlength);
+                month = date.Substring(startindex, monthlength);
+                toDay = date.Substring(8, 2);
                 switch (month)
                 {
                     // 春
@@ -145,6 +149,32 @@ namespace WindowsFormsApp1
             weatherPictureBox.Image = bmp;
             */
             /*************/
+
+
+            try
+            {
+                string currentData = DateTime.Now.ToString("MMdd");
+                HttpResponseMessage response = await _httpClient.GetAsync($"https://whatistoday.cyou/v2/anniv/{currentData}");
+                response.EnsureSuccessStatusCode();
+                string responseBody = await response.Content.ReadAsStringAsync();
+
+                // JSONデータを解析します。
+                JObject annivData = JObject.Parse(responseBody);
+
+                /*通知*/
+
+                new ToastContentBuilder()
+                    .AddText($"https://wazka.jp/v2/anniv/{currentData}")
+                    .AddText((string)annivData["_items"]["anniv1"])
+                    //.AddInlineImage(new Uri((string)foodData["result"][foodNum]["foodImageUrl"]))
+                    //AddHeroImage(new Uri("https://learn.microsoft.com/ja-jp/windows/apps/design/shell/tiles-and-notifications/images/toast-content-hero-image.png"))
+                    .Show();
+
+            }
+            catch (HttpRequestException ex)
+            {
+
+            }
 
             // 上で取得した月をもとにリンクを取得 ------------------------------------------------------------------------------ ↓↓↓ここにseason変数が代入され、季節別にURLに変わる
             string foodApiUrl = $"https://app.rakuten.co.jp/services/api/Recipe/CategoryRanking/20170426?format=json&categoryId={season}&pickup=0&applicationId=1062554798332159397";
