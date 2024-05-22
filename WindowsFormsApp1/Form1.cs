@@ -18,7 +18,6 @@ using Microsoft.Toolkit.Uwp.Notifications;
 using System.Diagnostics;
 using Windows.Perception.People;
 
-
 namespace WindowsFormsApp1
 {
     //test
@@ -35,8 +34,6 @@ namespace WindowsFormsApp1
         string toDay = 0.ToString();
         int annivCnt = 1;
 
-
-
         public Form1()
         {
             InitializeComponent();
@@ -44,7 +41,6 @@ namespace WindowsFormsApp1
 
         private async void Form1_Load(object sender, EventArgs e)
         {
-
             /*背景画像の表示*/
             /*
             this.Text = ProductName;
@@ -52,23 +48,19 @@ namespace WindowsFormsApp1
             pictureBox1.Image = Properties.Resources.test; //画像表示
             /************/
 
+            /*テキストボックスのプロパティ設定（機能しない）*/
             detailWeatherLabel.BackColor = Color.Transparent;
             locationPrefecturLabel.BackColor = Color.Transparent;
 
-
-
             /*天気取得*/
-
             try
             {
                 HttpResponseMessage response = await _httpClient.GetAsync(apiUrl);
                 response.EnsureSuccessStatusCode();
                 string responseBody = await response.Content.ReadAsStringAsync();
 
-                // JSONデータを解析します。
+                // JSON型に変換
                 JObject weatherData = JObject.Parse(responseBody);
-
-                // 「天気」の項目を取得します。
 
                 /*取得する日にちの設定*/
                 int day = 0;
@@ -115,31 +107,26 @@ namespace WindowsFormsApp1
                         monthrecipelabel.Text = "冬のおすすめレシピ!";
                         season = 55;
                         break;
-
                 }
-
 
                 string weatherDetail = (string)weatherData["forecasts"][day]["telop"];
 
+                /*天気表示*/
                 weatherImageUrl             = (string)weatherData["forecasts"][day]["image"]["url"];
                 locationPrefecturLabel.Text = (string)weatherData["location"]["prefecture"]+" "+ (string)weatherData["location"]["district"];
                 detailWeatherLabel.Text     = (string)weatherData["forecasts"][day]["detail"]["weather"];
                 bodyLabal.Text              = (string)weatherData["description"]["bodyText"];
                 datelabel.Text              = (string)weatherData["forecasts"][day]["date"];
-                /***********************/
-
-
-
             }
             catch (HttpRequestException ex)
             {
                 MessageBox.Show($"エラーが発生しました: {ex.Message}");
             }
-            /**********************/
 
             /*天気ロゴを表示*/
             weatherIconWeb.Navigate(weatherImageUrl);
-            /*
+
+            /* ↓機能しません↓
             // PictureBoxをフォームに追加し、SizeModeをStretchImageに設定します。
             weatherPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             // SVGファイルを読み込みます。
@@ -149,8 +136,6 @@ namespace WindowsFormsApp1
             // PictureBoxに表示します。
             weatherPictureBox.Image = bmp;
             */
-            /*************/
-
 
             try
             {
@@ -159,21 +144,18 @@ namespace WindowsFormsApp1
                 response.EnsureSuccessStatusCode();
                 string responseBody = await response.Content.ReadAsStringAsync();
 
-                // JSONデータを解析します。
+                // JSON型に変換
                 JObject annivData = JObject.Parse(responseBody);
 
                 /*今日は何の日*/
                 whatTodayLabel.Text = "今日は..."+(string)annivData["_items"][0][$"anniv{annivCnt}"];
-
             }
             catch (HttpRequestException ex)
             {
-
             }
 
             // 上で取得した月をもとにリンクを取得 ------------------------------------------------------------------------------ ↓↓↓ここにseason変数が代入され、季節別にURLに変わる
             string foodApiUrl = $"https://app.rakuten.co.jp/services/api/Recipe/CategoryRanking/20170426?format=json&categoryId={season}&pickup=0&applicationId=1062554798332159397";
-
 
             try
             {
@@ -181,16 +163,16 @@ namespace WindowsFormsApp1
                 response.EnsureSuccessStatusCode();
                 string responseBody = await response.Content.ReadAsStringAsync();
 
-                // JSONデータを解析します。
+                // JSON型に変換
                 JObject foodData = JObject.Parse(responseBody);
 
-                // 「food」の項目を取得します。
-
+                //レシピの詳細を表示
                 this.Text = ProductName;
                 foodPicutrebox.SizeMode = PictureBoxSizeMode.Zoom;
                 foodPicutrebox.ImageLocation = (string)foodData["result"][foodNum]["foodImageUrl"];
                 foodLabel.Text = (string)foodData["result"][foodNum]["recipeTitle"];
                 /***********************/
+
                 /*通知*/
                 new ToastContentBuilder()
                     .AddText("作れるもんなら作ってみな!")
@@ -233,8 +215,6 @@ namespace WindowsFormsApp1
                         break;
                 }
             }
-
-
             timer1.Start();
         }
 
@@ -244,6 +224,7 @@ namespace WindowsFormsApp1
             timelabel.Text = now.ToLongTimeString();
         }
 
+        /*レシピの更新*/
         private async void button1_Click(object sender, EventArgs e)
         {
                 string foodApiUrl = $"https://app.rakuten.co.jp/services/api/Recipe/CategoryRanking/20170426?format=json&categoryId={season}&pickup=0&applicationId=1062554798332159397";
@@ -254,7 +235,7 @@ namespace WindowsFormsApp1
                     response.EnsureSuccessStatusCode();
                     string responseBody = await response.Content.ReadAsStringAsync();
 
-                    // JSONデータを解析します。
+                    // JSON型に変換
                     JObject foodData = JObject.Parse(responseBody);
 
                 foodNum = ++foodNum;
@@ -263,25 +244,22 @@ namespace WindowsFormsApp1
                     foodNum = 0;
                 }
 
-                // 「food」の項目を取得します。
-
+                //食べ物の詳細を表示
                 this.Text = ProductName;
-                    foodPicutrebox.SizeMode = PictureBoxSizeMode.Zoom;
-                    foodPicutrebox.ImageLocation = (string)foodData["result"][foodNum]["foodImageUrl"];
-                    foodLabel.Text               = (string)foodData["result"][foodNum]["recipeTitle"];
-                    /***********************/
+                foodPicutrebox.SizeMode = PictureBoxSizeMode.Zoom;
+                foodPicutrebox.ImageLocation = (string)foodData["result"][foodNum]["foodImageUrl"];
+                foodLabel.Text               = (string)foodData["result"][foodNum]["recipeTitle"];
 
-                    /*notiImageに画像を入れる*/
-                    var notiImage = loadImageFromURL((string)foodData["result"][foodNum]["foodImageUrl"]);
-                    //pictureBox1.Image = notiImage;
+                /*notiImageに画像を入れる(動作しません)*/
+                //var notiImage = loadImageFromURL((string)foodData["result"][foodNum]["foodImageUrl"]);
+                //pictureBox1.Image = notiImage;
 
-                    /*通知*/
-                    new ToastContentBuilder()
-                        .AddText("作れるもんなら作ってみな!")
-                        .AddText((string)foodData["result"][foodNum]["recipeTitle"])
-                        //.AddInlineImage(new Uri("fille:///Resources/test.jpg"))
-                        .Show();
-
+                /*通知*/
+                new ToastContentBuilder()
+                    .AddText("作れるもんなら作ってみな!")
+                    .AddText((string)foodData["result"][foodNum]["recipeTitle"])
+                    //.AddInlineImage(new Uri("fille:///Resources/test.jpg"))
+                    .Show();
                 }
                 catch (HttpRequestException ex)
                 {
@@ -289,7 +267,7 @@ namespace WindowsFormsApp1
                 }
         }
 
-        /*リンク画像をimage型に変換　*/
+        /*リンク画像をimage型に変換(機能するが使用されない)*/
         public static System.Drawing.Image loadImageFromURL( string url ) {
             int buffSize = 65536; // 一度に読み込むサイズ
             MemoryStream imgStream = new MemoryStream();
@@ -323,7 +301,6 @@ namespace WindowsFormsApp1
                 // バッファに追加
                 imgStream.Write( buff, 0, readBytes );
             }
-
             return new Bitmap( imgStream );
         }
 
@@ -333,12 +310,12 @@ namespace WindowsFormsApp1
             public string CategoryId { get; set; }
         }
 
+        /*レシピの詳細を開く*/
         private async void button2_Click(object sender, EventArgs e)
         {
             string foodApiUrl = $"https://app.rakuten.co.jp/services/api/Recipe/CategoryRanking/20170426?format=json&categoryId={season}&pickup=0&applicationId=1062554798332159397";
             try
             {
-
                 HttpResponseMessage response = await _httpClient.GetAsync(foodApiUrl);
                 response.EnsureSuccessStatusCode();
                 string responseBody = await response.Content.ReadAsStringAsync();
@@ -358,10 +335,11 @@ namespace WindowsFormsApp1
 
         }
 
+        /*今日は何の日更新*/
         private async void button3_Click(object sender, EventArgs e)
         {
             annivCnt += 1;
-            string whatToday = "";
+            string whatToday = null;
             try
             {
                 string currentData = DateTime.Now.ToString("MMdd");
@@ -369,25 +347,22 @@ namespace WindowsFormsApp1
                 response.EnsureSuccessStatusCode();
                 string responseBody = await response.Content.ReadAsStringAsync();
 
-                // JSONデータを解析します。
+                // JSON型に変換
                 JObject annivData = JObject.Parse(responseBody);
+
                 whatToday = (string)annivData["_items"][0][$"anniv{annivCnt}"];
                 if(whatToday == "" )
                 {
-                    annivCnt = 0;
+                    annivCnt = 1;
                 }
 
-                /*今日は何の日*/
-                whatTodayLabel.Text = "今日は..." + (string)annivData["_items"][0][$"anniv{annivCnt}"];
-
-
+                whatTodayLabel.Text = "今日は... " + (string)annivData["_items"][0][$"anniv{annivCnt}"];
             }
             catch (HttpRequestException ex)
             {
-
             }
             if ( annivCnt >= 5 ) {
-            annivCnt = 0;
+                annivCnt = 0;
             }
         }
     }
