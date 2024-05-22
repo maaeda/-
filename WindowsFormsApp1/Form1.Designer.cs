@@ -102,7 +102,7 @@
             this.button1.Font = new System.Drawing.Font("MS UI Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Location = new System.Drawing.Point(907, 210);
-            this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(244, 77);
             this.button1.TabIndex = 3;
@@ -137,9 +137,7 @@
             // 
             this.weatherIconWeb.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.weatherIconWeb.AllowWebBrowserDrop = false;
-            this.weatherIconWeb.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.weatherIconWeb.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.weatherIconWeb.CausesValidation = false;
             this.weatherIconWeb.Location = new System.Drawing.Point(145, 277);
             this.weatherIconWeb.Name = "weatherIconWeb";
@@ -180,7 +178,7 @@
             this.button2.Font = new System.Drawing.Font("MS UI Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button2.Location = new System.Drawing.Point(1188, 210);
-            this.button2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button2.Margin = new System.Windows.Forms.Padding(5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(278, 77);
             this.button2.TabIndex = 3;
@@ -215,7 +213,7 @@
             this.foodPicutrebox.BackColor = System.Drawing.Color.Moccasin;
             this.foodPicutrebox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.foodPicutrebox.Location = new System.Drawing.Point(907, 390);
-            this.foodPicutrebox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.foodPicutrebox.Margin = new System.Windows.Forms.Padding(6);
             this.foodPicutrebox.Name = "foodPicutrebox";
             this.foodPicutrebox.Size = new System.Drawing.Size(457, 510);
             this.foodPicutrebox.TabIndex = 0;
@@ -223,9 +221,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources._1_pngqqq;
             this.pictureBox1.Location = new System.Drawing.Point(-133, -6);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1979, 1056);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -257,13 +254,13 @@
             // whatTodayLabel
             // 
             this.whatTodayLabel.AutoSize = true;
-            this.whatTodayLabel.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.whatTodayLabel.Location = new System.Drawing.Point(234, 18);
+            this.whatTodayLabel.Font = new System.Drawing.Font("メイリオ", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.whatTodayLabel.Location = new System.Drawing.Point(276, 30);
             this.whatTodayLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.whatTodayLabel.Name = "whatTodayLabel";
-            this.whatTodayLabel.Size = new System.Drawing.Size(205, 48);
+            this.whatTodayLabel.Size = new System.Drawing.Size(405, 66);
             this.whatTodayLabel.TabIndex = 11;
-            this.whatTodayLabel.Text = "whatToday";
+            this.whatTodayLabel.Text = "whatTodayLabel";
             // 
             // Form1
             // 
@@ -288,7 +285,7 @@
             this.Controls.Add(this.foodPicutrebox);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "BEST MEAL";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -297,8 +294,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
+
+        private System.Windows.Forms.Label whatTodayLabel;
 
         private System.Windows.Forms.PictureBox foodPicutrebox;
 
@@ -322,6 +320,5 @@
         public System.Windows.Forms.WebBrowser weatherIconWeb;
         private System.Windows.Forms.Label weatherinfotext;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label whatTodayLabel;
     }
 }
