@@ -33,7 +33,6 @@ D:\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.co
 D:\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
 D:\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
 D:\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.dll
-D:\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.xml
 D:\Documents\GitHub\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
 D:\Documents\GitHub\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
 D:\Documents\GitHub\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
@@ -147,3 +146,17 @@ C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\bin\Debug\M
 C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\bin\Debug\Microsoft.Toolkit.Uwp.Notifications.pdb
 C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\bin\Debug\System.ValueTuple.dll
 C:\Users\nusur\Documents\GitHub\BEST meal\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe.config
+D:\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\ExCSS.dll
+D:\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\System.Net.Http.Formatting.dll
+D:\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\Microsoft.Toolkit.Uwp.Notifications.dll
+D:\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\Microsoft.Toolkit.Uwp.Notifications.pdb
+D:\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.Bson.dll
+D:\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.Bson.pdb
+D:\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\Svg.dll
+D:\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\System.Buffers.dll
+D:\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\System.Memory.dll
+D:\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\System.Numerics.Vectors.dll
+D:\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Documents\GitHub\Best-meal\WindowsFormsApp1\bin\Debug\System.ValueTuple.dll
+D:\Documents\GitHub\Best-meal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe.config
