@@ -50,7 +50,6 @@ namespace WindowsFormsApp1
             /************/
 
             detailWeatherLabel.BackColor = Color.Transparent;
-            locationDistrictLabel.BackColor = Color.Transparent;
             locationPrefecturLabel.BackColor = Color.Transparent;
 
             string month;
@@ -121,8 +120,7 @@ namespace WindowsFormsApp1
                 string weatherDetail = (string)weatherData["forecasts"][day]["telop"];
 
                 weatherImageUrl             = (string)weatherData["forecasts"][day]["image"]["url"];
-                locationPrefecturLabel.Text = (string)weatherData["location"]["prefecture"];
-                locationDistrictLabel.Text  = (string)weatherData["location"]["district"];
+                locationPrefecturLabel.Text = (string)weatherData["location"]["prefecture"]+" "+ (string)weatherData["location"]["district"];
                 detailWeatherLabel.Text     = (string)weatherData["forecasts"][day]["detail"]["weather"];
                 bodyLabal.Text              = (string)weatherData["description"]["bodyText"];
                 datelabel.Text              = (string)weatherData["forecasts"][day]["date"];
