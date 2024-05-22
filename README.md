@@ -7,6 +7,8 @@
 
 <kbd>別のレシピを見る</kbd>で料理の更新ができます。
 
+<kbd>レシピサイトを表示</kbd>でレシピの詳細を開けます。
+
 ## 使用したAPI
 
 - [Rakuten Recipe APIs](https://webservice.rakuten.co.jp/documentation)
