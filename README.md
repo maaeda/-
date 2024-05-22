@@ -1,6 +1,6 @@
 # Best meal
 ## 概要
-時間 天気予報 料理を表示するアプリ
+時間 天気予報 料理 今日は何の日 を表示するアプリ
 
 ## 使用方法
 起動するだけ
@@ -14,6 +14,8 @@
 - [Rakuten Recipe APIs](https://webservice.rakuten.co.jp/documentation)
 
 - [天気予報 API（livedoor 天気互換)](https://weather.tsukumijima.net/)
+
+- [今日は何の日API](https://note.com/sooz/n/n94cc1c71ad97)
 
 > [!IMPORTANT]
 > 料理の更新にはRakuten APIを使用しており、Rakuten APIにはリクエスト制限があります。

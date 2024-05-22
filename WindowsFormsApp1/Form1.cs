@@ -16,6 +16,7 @@ using System.Net;
 using Svg;
 using Microsoft.Toolkit.Uwp.Notifications;
 using System.Diagnostics;
+using Windows.Perception.People;
 
 
 namespace WindowsFormsApp1
@@ -30,7 +31,9 @@ namespace WindowsFormsApp1
         // 天気APIのURL(ここで月を取得し対応した楽天レシピAPIを返す)
         string apiUrl = "https://weather.tsukumijima.net/api/forecast/city/070010";
         static int season = 0;
-
+        string month;
+        string toDay = 0.ToString();
+        int annivCnt = 1;
 
 
 
@@ -52,8 +55,7 @@ namespace WindowsFormsApp1
             detailWeatherLabel.BackColor = Color.Transparent;
             locationPrefecturLabel.BackColor = Color.Transparent;
 
-            string month;
-            string toDay = 0.ToString();
+
 
             /*天気取得*/
 
@@ -161,7 +163,7 @@ namespace WindowsFormsApp1
                 JObject annivData = JObject.Parse(responseBody);
 
                 /*今日は何の日*/
-                whatTodayLabel.Text = (string)annivData["_items"][0]["anniv1"];
+                whatTodayLabel.Text = "今日は..."+(string)annivData["_items"][0][$"anniv{annivCnt}"];
 
             }
             catch (HttpRequestException ex)
@@ -354,6 +356,39 @@ namespace WindowsFormsApp1
         private void weatherIconWeb_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
 
+        }
+
+        private async void button3_Click(object sender, EventArgs e)
+        {
+            annivCnt += 1;
+            string whatToday = "";
+            try
+            {
+                string currentData = DateTime.Now.ToString("MMdd");
+                HttpResponseMessage response = await _httpClient.GetAsync($"https://whatistoday.cyou/v2/anniv/{currentData}");
+                response.EnsureSuccessStatusCode();
+                string responseBody = await response.Content.ReadAsStringAsync();
+
+                // JSONデータを解析します。
+                JObject annivData = JObject.Parse(responseBody);
+                whatToday = (string)annivData["_items"][0][$"anniv{annivCnt}"];
+                if(whatToday == "" )
+                {
+                    annivCnt = 0;
+                }
+
+                /*今日は何の日*/
+                whatTodayLabel.Text = "今日は..." + (string)annivData["_items"][0][$"anniv{annivCnt}"];
+
+
+            }
+            catch (HttpRequestException ex)
+            {
+
+            }
+            if ( annivCnt >= 5 ) {
+            annivCnt = 0;
+            }
         }
     }
 }
