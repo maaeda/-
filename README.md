@@ -5,7 +5,7 @@
 ## 使用方法
 起動するだけ
 
-<kbd>朝の食事一覧</kbd>で料理の更新ができます。
+<kbd>別のレシピを見る</kbd>で料理の更新ができます。
 
 ## 使用したAPI
 
@@ -19,6 +19,7 @@
 
 ## 使用したライブラリ？
 
+- <img src="https://api.nuget.org/v3-flatcontainer/microsoft.toolkit.uwp.notifications/7.1.3/icon" width="15">[ Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
 - <img src="https://nuget.org/Content/gallery/img/default-package-icon.svg" width="15">[ ExCSS](https://github.com/TylerBrinks/ExCSS)
 - <img src="https://api.nuget.org/v3-flatcontainer/microsoft.aspnet.webapi.client/6.0.0/icon" width="15">[ Microsoft.AspNet.WebApi.Clie](https://dotnet.microsoft.com/ja-jp/apps/aspnet/apis)
 - <img src="https://api.nuget.org/v3-flatcontainer/newtonsoft.json/13.0.3/icon" width="15">[ Newtonsoft.Json](https://www.newtonsoft.com/json)
