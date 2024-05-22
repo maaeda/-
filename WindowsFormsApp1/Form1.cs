@@ -48,8 +48,12 @@ namespace WindowsFormsApp1
             pictureBox1.Image = Properties.Resources.test; //画像表示
             /************/
 
+            detailWeatherLabel.BackColor = Color.Transparent;
+            locationDistrictLabel.BackColor = Color.Transparent;
+            locationPrefecturLabel.BackColor = Color.Transparent;
+
             /*天気取得*/
-            
+
             try
             {
                 HttpResponseMessage response = await _httpClient.GetAsync(apiUrl);
