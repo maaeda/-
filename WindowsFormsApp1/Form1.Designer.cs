@@ -102,7 +102,7 @@
             this.button1.Font = new System.Drawing.Font("MS UI Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Location = new System.Drawing.Point(698, 158);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(188, 58);
             this.button1.TabIndex = 3;
@@ -142,7 +142,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.weatherIconWeb.CausesValidation = false;
             this.weatherIconWeb.Location = new System.Drawing.Point(146, 213);
-            this.weatherIconWeb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.weatherIconWeb.Margin = new System.Windows.Forms.Padding(2);
             this.weatherIconWeb.Name = "weatherIconWeb";
             this.weatherIconWeb.ScrollBarsEnabled = false;
             this.weatherIconWeb.Size = new System.Drawing.Size(82, 66);
@@ -181,7 +181,7 @@
             this.button2.Font = new System.Drawing.Font("MS UI Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button2.Location = new System.Drawing.Point(914, 158);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(214, 58);
             this.button2.TabIndex = 3;
@@ -206,7 +206,7 @@
             // 
             this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.currentlocationpin;
             this.pictureBox2.Location = new System.Drawing.Point(166, 142);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(62, 56);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -227,7 +227,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.r;
-            this.pictureBox1.Location = new System.Drawing.Point(-102, -4);
+            this.pictureBox1.Location = new System.Drawing.Point(-105, -16);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1522, 792);
