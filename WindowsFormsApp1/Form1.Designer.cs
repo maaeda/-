@@ -134,13 +134,15 @@
             // weatherIconWeb
             // 
             this.weatherIconWeb.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.weatherIconWeb.AllowNavigation = false;
             this.weatherIconWeb.AllowWebBrowserDrop = false;
+            this.weatherIconWeb.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.weatherIconWeb.CausesValidation = false;
             this.weatherIconWeb.Location = new System.Drawing.Point(151, 336);
-            this.weatherIconWeb.MinimumSize = new System.Drawing.Size(20, 19);
             this.weatherIconWeb.Name = "weatherIconWeb";
-            this.weatherIconWeb.Size = new System.Drawing.Size(80, 60);
+            this.weatherIconWeb.ScrollBarsEnabled = false;
+            this.weatherIconWeb.Size = new System.Drawing.Size(60, 60);
             this.weatherIconWeb.TabIndex = 4;
             this.weatherIconWeb.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.weatherIconWeb_DocumentCompleted);
             // 
@@ -277,8 +279,6 @@
 
         private System.Windows.Forms.PictureBox foodPicutrebox;
 
-        private System.Windows.Forms.WebBrowser weatherIconWeb;
-
         private System.Windows.Forms.Label locationDistrictLabel;
 
         private System.Windows.Forms.Label bodyLabal;
@@ -298,5 +298,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label Food;
         private System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.WebBrowser weatherIconWeb;
     }
 }
