@@ -42,14 +42,6 @@ namespace WindowsFormsApp1
         private async void Form1_Load(object sender, EventArgs e)
         {
 
-            
-            
-
-            
-
-
-            
-
             /*背景画像の表示*/
             /*
             this.Text = ProductName;
@@ -57,8 +49,15 @@ namespace WindowsFormsApp1
             pictureBox1.Image = Properties.Resources.test; //画像表示
             /************/
 
+            detailWeatherLabel.BackColor = Color.Transparent;
+            locationDistrictLabel.BackColor = Color.Transparent;
+            locationPrefecturLabel.BackColor = Color.Transparent;
+
+            string month;
+            string toDay = 0.ToString();
+
             /*天気取得*/
-            
+
             try
             {
                 HttpResponseMessage response = await _httpClient.GetAsync(apiUrl);
@@ -83,7 +82,8 @@ namespace WindowsFormsApp1
                 string date = (string)weatherData["forecasts"][day]["date"];
                 int startindex= 5;
                 int monthlength = 2;
-                string month = date.Substring(startindex, monthlength);
+                month = date.Substring(startindex, monthlength);
+                toDay = date.Substring(8, 2);
                 switch (month)
                 {
                     // 春
@@ -151,6 +151,32 @@ namespace WindowsFormsApp1
             */
             /*************/
 
+
+            try
+            {
+                string currentData = DateTime.Now.ToString("MMdd");
+                HttpResponseMessage response = await _httpClient.GetAsync($"https://whatistoday.cyou/v2/anniv/{currentData}");
+                response.EnsureSuccessStatusCode();
+                string responseBody = await response.Content.ReadAsStringAsync();
+
+                // JSONデータを解析します。
+                JObject annivData = JObject.Parse(responseBody);
+
+                /*通知*/
+
+                new ToastContentBuilder()
+                    .AddText($"https://wazka.jp/v2/anniv/{currentData}")
+                    .AddText((string)annivData["_items"][0]["anniv1"])
+                    //.AddInlineImage(new Uri((string)foodData["result"][foodNum]["foodImageUrl"]))
+                    //AddHeroImage(new Uri("https://learn.microsoft.com/ja-jp/windows/apps/design/shell/tiles-and-notifications/images/toast-content-hero-image.png"))
+                    .Show();
+
+            }
+            catch (HttpRequestException ex)
+            {
+
+            }
+
             // 上で取得した月をもとにリンクを取得 ------------------------------------------------------------------------------ ↓↓↓ここにseason変数が代入され、季節別にURLに変わる
             string foodApiUrl = $"https://app.rakuten.co.jp/services/api/Recipe/CategoryRanking/20170426?format=json&categoryId={season}&pickup=0&applicationId=1062554798332159397";
 
@@ -171,6 +197,14 @@ namespace WindowsFormsApp1
                 foodPicutrebox.ImageLocation = (string)foodData["result"][foodNum]["foodImageUrl"];
                 foodLabel.Text = (string)foodData["result"][foodNum]["recipeTitle"];
                 /***********************/
+                /*通知*/
+                new ToastContentBuilder()
+                    .AddText("作れるもんなら作ってみな!")
+                    .AddText((string)foodData["result"][foodNum]["recipeTitle"])
+                    //.AddInlineImage(new Uri((string)foodData["result"][foodNum]["foodImageUrl"]))
+                    //AddHeroImage(new Uri("https://learn.microsoft.com/ja-jp/windows/apps/design/shell/tiles-and-notifications/images/toast-content-hero-image.png"))
+                    .Show();
+
             }
             catch (HttpRequestException ex)
             {
@@ -222,7 +256,7 @@ namespace WindowsFormsApp1
                 try
                 {
                 
-                HttpResponseMessage response = await _httpClient.GetAsync(foodApiUrl);
+                    HttpResponseMessage response = await _httpClient.GetAsync(foodApiUrl);
                     response.EnsureSuccessStatusCode();
                     string responseBody = await response.Content.ReadAsStringAsync();
 
@@ -242,18 +276,61 @@ namespace WindowsFormsApp1
                     foodPicutrebox.ImageLocation = (string)foodData["result"][foodNum]["foodImageUrl"];
                     foodLabel.Text               = (string)foodData["result"][foodNum]["recipeTitle"];
                     /***********************/
+
+                    /*notiImageに画像を入れる*/
+                    var notiImage = loadImageFromURL((string)foodData["result"][foodNum]["foodImageUrl"]);
+                    //pictureBox1.Image = notiImage;
+
+                    /*通知*/
+                    new ToastContentBuilder()
+                        .AddText("作れるもんなら作ってみな!")
+                        .AddText((string)foodData["result"][foodNum]["recipeTitle"])
+                        //.AddInlineImage(new Uri("fille:///Resources/test.jpg"))
+                        .Show();
+
                 }
                 catch (HttpRequestException ex)
                 {
                     MessageBox.Show($"エラーが発生しました: {ex.Message}");
                 }
+        }
 
-            /*通知*/
-            new ToastContentBuilder()
-                .AddText("My Toast")
-                .AddText("Hello Toast!")
-                .Show();
+        /*リンク画像をimage型に変換　*/
+        public static System.Drawing.Image loadImageFromURL( string url ) {
+            int buffSize = 65536; // 一度に読み込むサイズ
+            MemoryStream imgStream = new MemoryStream();
 
+            //------------------------
+            // パラメータチェック
+            //------------------------
+            if ( url == null || url.Trim().Length <= 0 ) {
+                return null;
+            }
+
+            //----------------------------
+            // Webサーバに要求を投げる
+            //----------------------------
+            WebRequest req = WebRequest.Create( url );
+            BinaryReader reader = new BinaryReader( req.GetResponse().GetResponseStream() );
+
+            //--------------------------------------------------------
+            // Webサーバからの応答データを取得し、imgStreamに保存する
+            //--------------------------------------------------------
+            while ( true ) {
+                byte[] buff = new byte[ buffSize ];
+
+                // 応答データの取得
+                int readBytes = reader.Read( buff, 0, buffSize );
+                if ( readBytes <= 0 ) {
+                    // 最後まで取得した->ループを抜ける
+                    break;
+                }
+
+                // バッファに追加
+                imgStream.Write( buff, 0, readBytes );
+            }
+
+            return new Bitmap( imgStream );
         }
 
         public class Category
@@ -280,6 +357,11 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show($"エラーが発生しました: {ex.Message}");
             }
+        }
+
+        private void weatherIconWeb_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
         }
     }
 }

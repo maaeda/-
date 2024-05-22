@@ -114,5 +114,47 @@
       <Version>4.3.4</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\y.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\q.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.pnge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.pngqqq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.pngr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.pngf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.pngr1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.pngt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.pngggg.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
