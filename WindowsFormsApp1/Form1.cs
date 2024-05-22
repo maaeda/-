@@ -160,14 +160,8 @@ namespace WindowsFormsApp1
                 // JSONデータを解析します。
                 JObject annivData = JObject.Parse(responseBody);
 
-                /*通知*/
-
-                new ToastContentBuilder()
-                    .AddText($"https://wazka.jp/v2/anniv/{currentData}")
-                    .AddText((string)annivData["_items"][0]["anniv1"])
-                    //.AddInlineImage(new Uri((string)foodData["result"][foodNum]["foodImageUrl"]))
-                    //AddHeroImage(new Uri("https://learn.microsoft.com/ja-jp/windows/apps/design/shell/tiles-and-notifications/images/toast-content-hero-image.png"))
-                    .Show();
+                /*今日は何の日*/
+                whatTodayLabel.Text = (string)annivData["_items"][0]["anniv1"];
 
             }
             catch (HttpRequestException ex)
