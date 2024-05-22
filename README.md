@@ -9,6 +9,8 @@
 
 <kbd>レシピサイトを表示</kbd>でレシピの詳細を開けます。
 
+<kbd>記念日更新</kbd>で記念日を更新できます。
+
 ## 使用したAPI
 
 - [Rakuten Recipe APIs](https://webservice.rakuten.co.jp/documentation)
