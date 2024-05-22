@@ -77,6 +77,7 @@ namespace WindowsFormsApp1
                 int monthlength = 2;
                 month = date.Substring(startindex, monthlength);
                 toDay = date.Substring(8, 2);
+                //month = 12.ToString() ;
                 switch (month)
                 {
                     // 春
