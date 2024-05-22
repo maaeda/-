@@ -52,9 +52,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.foodPicutrebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
+            //
             // timelabel
-            // 
+            //
             this.timelabel.AutoSize = true;
             this.timelabel.BackColor = System.Drawing.Color.Khaki;
             this.timelabel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -65,9 +65,9 @@
             this.timelabel.Size = new System.Drawing.Size(243, 70);
             this.timelabel.TabIndex = 1;
             this.timelabel.Text = "label1";
-            // 
+            //
             // locationPrefecturLabel
-            // 
+            //
             this.locationPrefecturLabel.AutoSize = true;
             this.locationPrefecturLabel.BackColor = System.Drawing.Color.Transparent;
             this.locationPrefecturLabel.Font = new System.Drawing.Font("UD デジタル 教科書体 NK-B", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -78,13 +78,13 @@
             this.locationPrefecturLabel.Size = new System.Drawing.Size(462, 55);
             this.locationPrefecturLabel.TabIndex = 1;
             this.locationPrefecturLabel.Text = "locationPrefectur";
-            // 
+            //
             // timer1
-            // 
+            //
             this.timer1.Tick += new System.EventHandler(this.timer1_tick);
-            // 
+            //
             // foodLabel
-            // 
+            //
             this.foodLabel.AutoSize = true;
             this.foodLabel.BackColor = System.Drawing.Color.White;
             this.foodLabel.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -95,9 +95,9 @@
             this.foodLabel.Size = new System.Drawing.Size(184, 41);
             this.foodLabel.TabIndex = 2;
             this.foodLabel.Text = "foodLabel";
-            // 
+            //
             // button1
-            // 
+            //
             this.button1.BackColor = System.Drawing.Color.DarkOrange;
             this.button1.Font = new System.Drawing.Font("MS UI Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -109,9 +109,9 @@
             this.button1.Text = "別のレシピを見る";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
+            //
             // bodyLabal
-            // 
+            //
             this.bodyLabal.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.bodyLabal.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.bodyLabal.Location = new System.Drawing.Point(198, 390);
@@ -120,9 +120,9 @@
             this.bodyLabal.Size = new System.Drawing.Size(676, 509);
             this.bodyLabal.TabIndex = 1;
             this.bodyLabal.Text = "bodyLabal";
-            // 
+            //
             // detailWeatherLabel
-            // 
+            //
             this.detailWeatherLabel.AutoSize = true;
             this.detailWeatherLabel.BackColor = System.Drawing.Color.Transparent;
             this.detailWeatherLabel.Font = new System.Drawing.Font("UD デジタル 教科書体 NK-B", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -132,9 +132,9 @@
             this.detailWeatherLabel.Size = new System.Drawing.Size(514, 55);
             this.detailWeatherLabel.TabIndex = 1;
             this.detailWeatherLabel.Text = "detailWeatherLabel";
-            // 
+            //
             // weatherIconWeb
-            // 
+            //
             this.weatherIconWeb.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.weatherIconWeb.AllowWebBrowserDrop = false;
             this.weatherIconWeb.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
@@ -145,9 +145,9 @@
             this.weatherIconWeb.Size = new System.Drawing.Size(107, 110);
             this.weatherIconWeb.TabIndex = 4;
             this.weatherIconWeb.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.weatherIconWeb_DocumentCompleted);
-            // 
+            //
             // monthrecipelabel
-            // 
+            //
             this.monthrecipelabel.AutoSize = true;
             this.monthrecipelabel.BackColor = System.Drawing.Color.NavajoWhite;
             this.monthrecipelabel.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -158,9 +158,9 @@
             this.monthrecipelabel.Size = new System.Drawing.Size(121, 41);
             this.monthrecipelabel.TabIndex = 5;
             this.monthrecipelabel.Text = "label1";
-            // 
+            //
             // datelabel
-            // 
+            //
             this.datelabel.AutoSize = true;
             this.datelabel.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.datelabel.Font = new System.Drawing.Font("Stencil", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -171,9 +171,9 @@
             this.datelabel.Size = new System.Drawing.Size(159, 46);
             this.datelabel.TabIndex = 6;
             this.datelabel.Text = "label1";
-            // 
+            //
             // button2
-            // 
+            //
             this.button2.BackColor = System.Drawing.Color.DarkOrange;
             this.button2.Font = new System.Drawing.Font("MS UI Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -185,9 +185,9 @@
             this.button2.Text = "レシピサイトを表示\r\n(ブラウザが開きます)";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
+            //
             // Food
-            // 
+            //
             this.Food.AutoSize = true;
             this.Food.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Food.Font = new System.Drawing.Font("Stencil", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -197,9 +197,9 @@
             this.Food.Size = new System.Drawing.Size(132, 51);
             this.Food.TabIndex = 8;
             this.Food.Text = "Food";
-            // 
+            //
             // pictureBox2
-            // 
+            //
             this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.currentlocationpin;
             this.pictureBox2.Location = new System.Drawing.Point(172, 197);
             this.pictureBox2.Name = "pictureBox2";
@@ -207,9 +207,9 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
-            // 
+            //
             // foodPicutrebox
-            // 
+            //
             this.foodPicutrebox.BackColor = System.Drawing.Color.Moccasin;
             this.foodPicutrebox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.foodPicutrebox.Location = new System.Drawing.Point(907, 390);
@@ -218,9 +218,9 @@
             this.foodPicutrebox.Size = new System.Drawing.Size(457, 510);
             this.foodPicutrebox.TabIndex = 0;
             this.foodPicutrebox.TabStop = false;
-            // 
+            //
             // pictureBox1
-            // 
+            //
             this.pictureBox1.Location = new System.Drawing.Point(-133, -6);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox1.Name = "pictureBox1";
@@ -228,9 +228,9 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
+            //
             // weatherinfotext
-            // 
+            //
             this.weatherinfotext.AutoSize = true;
             this.weatherinfotext.Font = new System.Drawing.Font("メイリオ", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.weatherinfotext.Location = new System.Drawing.Point(304, 133);
@@ -239,9 +239,9 @@
             this.weatherinfotext.Size = new System.Drawing.Size(378, 66);
             this.weatherinfotext.TabIndex = 10;
             this.weatherinfotext.Text = "-本日の天気情報-";
-            // 
+            //
             // label1
-            // 
+            //
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("メイリオ", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label1.Location = new System.Drawing.Point(1040, 133);
@@ -250,20 +250,20 @@
             this.label1.Size = new System.Drawing.Size(313, 66);
             this.label1.TabIndex = 11;
             this.label1.Text = "-料理コーナー";
-            // 
+            //
             // whatTodayLabel
-            // 
+            //
             this.whatTodayLabel.AutoSize = true;
-            this.whatTodayLabel.Font = new System.Drawing.Font("メイリオ", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.whatTodayLabel.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.whatTodayLabel.Location = new System.Drawing.Point(276, 30);
             this.whatTodayLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.whatTodayLabel.Name = "whatTodayLabel";
-            this.whatTodayLabel.Size = new System.Drawing.Size(405, 66);
+            this.whatTodayLabel.Size = new System.Drawing.Size(295, 48);
             this.whatTodayLabel.TabIndex = 11;
             this.whatTodayLabel.Text = "whatTodayLabel";
-            // 
+            //
             // Form1
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1753, 971);
